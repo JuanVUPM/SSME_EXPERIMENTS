@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eds SYSTEM "DTDFILE_FULLPATH">
+<schematic version="1.2.0" paper="A4" orientation="Landscape" sorting="customized" aliasingInShapes="true" aliasingInUnitSymbols="true" connector-status="allshowed" connector-creation="true" >
+
+	<grid enabled="true" snap="true" hspacing="8" vspacing="8" colorMain="230,230,230" colorSecondary="243,243,243" numberCells="4" margin="true" />
+
+	<layers>
+			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
+	</layers>
+	
+	<text id="Text_1" cx="105" cy="28" sx="210" sy="56" lineType="0"  color="255,255,220" dx="880" dy="706" layer="1"  >
+		<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; LIBRARY: SSME_EXPERIMENTS&#60;/p&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; FILE: Cooling_Test&#60;/p&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; CREATION DATE: 13/03/2019&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
+	</text>
+
+	<component id="Inlet_LOX" library="LPRES" type="Inlet" layer="1" elPosition="0"  hotPort="f" >
+	
+		<symbol cx="208.029" cy="72" sx="64.9412" sy="89" dx="490" dy="-38" onLabel="true" />
+	
+		<label cx="31.5" cy="12" dx="664.529" dy="76" />
+	
+	</component>
+
+	<component id="Pump_LH2" library="LPRES" type="Pump" layer="1" elPosition="1"  hotPort="f_out" >
+	
+		<symbol cx="432" cy="277.518" sx="105" sy="84.0355" dx="-219.518" dy="-107.518" rotation="90" onLabel="true" />
+	
+		<label cx="36" cy="12" dx="90" dy="162" />
+	
+	</component>
+
+	<component id="Pump_LOX" library="LPRES" type="Pump" layer="1" elPosition="2"  hotPort="f_out" >
+	
+		<symbol cx="432" cy="277.518" sx="105" sy="84.0355" dx="431.518" dy="-107.518" rotation="90" flipY="true" onLabel="true" />
+	
+		<label cx="36.5" cy="12" dx="906" dy="162" />
+	
+	</component>
+
+	<component id="Inlet_LH2" library="LPRES" type="Inlet" layer="1" elPosition="3"  hotPort="f" >
+	
+		<symbol cx="208.029" cy="72" sx="64.9412" sy="89" dx="162" dy="-38" onLabel="true" />
+	
+		<label cx="31" cy="12" dx="337.029" dy="76" />
+	
+		<instanceData>
+			<datum id="fluid" value="LH2" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="SplitFrac" library="LPRES" type="SplitFrac" layer="1" elPosition="4"  hotPort="f_out" >
+	
+		<symbol cx="244" cy="112" sx="81" sy="49" dx="-26" dy="190" rotation="270" flipX="true" onLabel="true" />
+	
+		<label cx="30" cy="12" dx="181.5" dy="324" />
+	
+		<instanceData>
+			<datum id="TPL" value="1" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Turbine_ch" library="LPRES" type="Turbine_ch" layer="1" elPosition="5"  hotPort="f_out" >
+	
+		<symbol cx="244" cy="153.974" sx="129" sy="92.9472" dx="210" dy="86.053" flipY="true" flipX="true" onLabel="true" />
+	
+		<label cx="35.5" cy="12" dx="412.5" dy="284" />
+	
+	</component>
+
+	<component id="GasGen" library="LPRES" type="GasGen" layer="1" elPosition="6"  hotPort="g" >
+	
+		<symbol cx="220" cy="180" sx="81" sy="121" dx="382" dy="90" rotation="90" flipX="true" onLabel="true" />
+	
+		<label cx="28" cy="12" dx="567.5" dy="328" />
+	
+		<instanceData>
+			<datum id="eta_d" value="1" pos="D" />
+			<datum id="Q_comb" value="14700000" pos="D" />
+			<datum id="cp_P" value="3500" pos="D" />
+			<datum id="M_P" value="15" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Inj_F_GG" library="LPRES" type="Injector" layer="1" elPosition="7"  hotPort="f_out" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="516" dy="172" rotation="90" onLabel="true" />
+	
+		<label cx="31.5" cy="12" dx="673.5" dy="330" />
+	
+		<instanceData>
+			<datum id="Type" value="Liquid" pos="P" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Inj_O_GG" library="LPRES" type="Injector" layer="1" elPosition="8"  hotPort="f_out" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="516" dy="140" rotation="90" onLabel="true" />
+	
+		<label cx="32.5" cy="12" dx="672.5" dy="298" />
+	
+		<instanceData>
+			<datum id="Type" value="Liquid" pos="P" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Inj_F_CC" library="LPRES" type="Injector" layer="1" elPosition="9"  hotPort="f_out" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="138" dy="294" onLabel="true" />
+	
+		<label cx="30.5" cy="12" dx="296.5" dy="452" />
+	
+		<instanceData>
+			<datum id="Type" value="Liquid" pos="P" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Inj_O_CC" library="LPRES" type="Injector" layer="1" elPosition="10"  hotPort="f_out" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="234" dy="294" onLabel="true" />
+	
+		<label cx="31.5" cy="12" dx="391.5" dy="452" />
+	
+	</component>
+
+	<component id="CombCha" library="LPRES" type="CombCha" layer="1" elPosition="11"  hotPort="g" >
+	
+		<symbol cx="218" cy="150" sx="117" sy="181" dx="162" dy="406" onLabel="true" />
+	
+		<label cx="32.5" cy="12" dx="341" dy="644" />
+	
+		<instanceData>
+			<datum id="Cooled" value="Yes" pos="P" />
+			<datum id="A_wet" value="1*2" pos="D" />
+			<datum id="eta_d" value="1" pos="D" />
+			<datum id="Q_comb" value="14700000" pos="D" />
+			<datum id="cp_P" value="3500" pos="D" />
+			<datum id="M_P" value="15" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="FlowMeter_1" library="LPRES" type="FlowMeter" layer="1" elPosition="12"  hotPort="i" >
+	
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="14" dy="278" rotation="270" flipX="true" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="211" dy="440" />
+	
+	</component>
+
+	<component id="FlowMeter_2" library="LPRES" type="FlowMeter" layer="1" elPosition="13"  hotPort="i" >
+	
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="170" dy="202" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="367" dy="364" />
+	
+	</component>
+
+	<component id="ThrustMonitor" library="LPRES" type="ThrustMonitor" layer="1" elPosition="14"  hotPort="i" >
+	
+		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="274" dy="494" onLabel="true" />
+	
+		<label cx="43.5" cy="12" dx="535.5" dy="680" />
+	
+	</component>
+
+	<component id="ControlPanel_1" library="LPRES" type="ControlPanel" layer="1" elPosition="15" >
+	
+		<symbol cx="418" cy="226" sx="173" sy="93" dx="334" dy="294" onLabel="true" />
+	
+		<label cx="48" cy="12" dx="696.5" dy="564" />
+	
+	</component>
+
+	<component id="NozzleExt_1" library="LPRES" type="NozzleExt" layer="1" elPosition="16"  hotPort="g_out" >
+	
+		<symbol cx="345.75" cy="214" sx="140.5" sy="77" dx="26" dy="474" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="323.25" dy="724" />
+	
+		<instanceData>
+			<datum id="AR" value="1" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="CoolingJacket_Nozzle" library="LPRES" type="CoolingJacket" layer="1" elPosition="17"  hotPort="g" >
+	
+		<symbol cx="274" cy="138" sx="45" sy="117" dx="20" dy="452" onLabel="true" />
+	
+		<label cx="68" cy="12" dx="217.5" dy="646" />
+	
+		<instanceData>
+			<datum id="L" value="2" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Inlet_cooling" library="LPRES" type="Inlet" layer="1" elPosition="18"  hotPort="f" >
+	
+		<symbol cx="208.029" cy="72" sx="64.9412" sy="89" dx="-142" dy="514" onLabel="true" />
+	
+		<label cx="40" cy="12" dx="24.0294" dy="628" />
+	
+		<instanceData>
+			<datum id="fluid" value="LH2" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Outlet_cooling" library="LPRES" type="Outlet" layer="1" elPosition="19" >
+	
+		<symbol cx="232" cy="128.029" sx="89" sy="64.9412" dx="-134" dy="337.941" rotation="180" onLabel="true" />
+	
+		<label cx="45.5" cy="12" dx="49" dy="495.941" />
+	
+	</component>
+
+	<connector id="Connector_1" sShape="Inlet_LH2" sPort="f" eShape="Pump_LH2" ePort="f_in" points="360,112"  intermediate1="1" elPosition="0" dx="10" dy="10"  />
+
+	<connector id="Connector_2" sShape="Inlet_LOX" sPort="f" eShape="Pump_LOX" ePort="f_in" points="688,112"  intermediate1="1" elPosition="1" dx="10" dy="10"  />
+
+	<connector id="Connector_3" sShape="Pump_LH2" sPort="m" eShape="Turbine_ch" ePort="m" points="504,160"  intermediate2="1" elPosition="2" dx="10" dy="10"  />
+
+	<connector id="Connector_4" sShape="Pump_LOX" sPort="m" eShape="Turbine_ch" ePort="m" points="504,160"  intermediate2="1" elPosition="3" dx="10" dy="10"  />
+
+	<connector id="Connector_5" sShape="Pump_LH2" sPort="f_out" eShape="SplitFrac" ePort="f_in" elPosition="4" dx="10" dy="10"  />
+
+	<connector id="Connector_7" sShape="SplitFrac" sPort="f_b" eShape="Inj_F_GG" ePort="f_in" points="228,360 728,360"  intermediate1="1" elPosition="5" dx="10" dy="10"  />
+
+	<connector id="Connector_8" sShape="Pump_LOX" sPort="f_out" eShape="Inj_O_GG" ePort="f_in" points="864,256"  intermediate1="1" elPosition="6" dx="10" dy="10"  />
+
+	<connector id="Connector_9" sShape="Inj_O_GG" sPort="f_out" eShape="GasGen" ePort="f_O" elPosition="7" dx="10" dy="10"  />
+
+	<connector id="Connector_10" sShape="Inj_F_GG" sPort="f_out" eShape="GasGen" ePort="f_F" elPosition="8" dx="10" dy="10"  />
+
+	<connector id="Connector_13" sShape="Inj_F_CC" sPort="f_out" eShape="CombCha" ePort="f_F" points="360,440"  intermediate2="1" elPosition="9" dx="10" dy="10"  />
+
+	<connector id="Connector_14" sShape="Inj_O_CC" sPort="f_out" eShape="CombCha" ePort="f_O" points="392,440"  intermediate2="1" elPosition="10" dx="10" dy="10"  />
+
+	<connector id="Connector_11" sShape="SplitFrac" sPort="f_out" eShape="FlowMeter_1" ePort="f_in" points="192,376"  intermediate2="1" elPosition="11" dx="10" dy="10"  />
+
+	<connector id="Connector_15" sShape="FlowMeter_1" sPort="f_out" eShape="Inj_F_CC" ePort="f_in" points="320,376"  intermediate2="1" elPosition="12" dx="10" dy="10"  />
+
+	<connector id="Connector_16" sShape="FlowMeter_2" sPort="f_out" eShape="Inj_O_CC" ePort="f_in" points="384,380"  intermediate2="1" elPosition="13" dx="10" dy="10"  />
+
+	<connector id="Connector_18" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="660,648"  intermediate1="1" elPosition="14" dx="10" dy="10"  />
+
+	<connector id="Connector_19" sShape="CombCha" sPort="i" eShape="ControlPanel_1" ePort="i_Comb" points="424,484"  intermediate1="1" elPosition="15" dx="10" dy="10"  />
+
+	<connector id="Connector_20" sShape="FlowMeter_1" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="248,696 824,696"  intermediate1="3" elPosition="16" dx="10" dy="10"  />
+
+	<connector id="Connector_21" sShape="FlowMeter_2" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="520,320 520,440 824,440" elPosition="17" dx="10" dy="10"  />
+
+	<connector id="Connector_6" sShape="GasGen" sPort="g" eShape="Turbine_ch" ePort="f_in" elPosition="18" dx="10" dy="10"  />
+
+	<connector id="Connector_12" sShape="Turbine_ch" sPort="f_out" eShape="FlowMeter_2" ePort="f_in" elPosition="19" dx="10" dy="10"  />
+
+	<connector id="Connector_17" sShape="CombCha" sPort="g" eShape="NozzleExt_1" ePort="g_in" elPosition="20" dx="10" dy="10"  />
+
+	<connector id="Connector_22" sShape="NozzleExt_1" sPort="g_out" eShape="ThrustMonitor" ePort="g" points="368,712 368,728 496,728 496,604"  intermediate1="1" elPosition="21" dx="10" dy="10"  />
+
+	<connector id="Connector_23" sShape="CombCha" sPort="h" eShape="CoolingJacket_Nozzle" ePort="h" points="316,580 302,580"  intermediate1="1" elPosition="22" dx="10" dy="10"  />
+
+	<connector id="Connector_24" sShape="Inlet_cooling" sPort="f" eShape="CoolingJacket_Nozzle" ePort="l" points="266,616"  intermediate2="1" elPosition="23" dx="10" dy="10"  />
+
+	<connector id="Connector_25" sShape="CoolingJacket_Nozzle" sPort="g" eShape="Outlet_cooling" ePort="f" points="286,512 128,512" elPosition="24" dx="10" dy="10"  />
+
+	<bodyEL>
+	<![CDATA[-- EL code of the schematic.
+-- The COMPONENT definition lines are blocked for edition.
+-- You can edit the parameters clicking over them.
+
+COMPONENT %NAME% 
+
+
+END COMPONENT
+]]>
+	</bodyEL>
+
+	<usedLibrary name="LPRES" version="1.3.5" auto="true" />
+</schematic>

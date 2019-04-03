@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Staged_Combustion" partition="OffDesign">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<boundaries>
+  <variable name="Inlet_LH2.Tt"/>
+  <variable name="Inlet_LH2.pt"/>
+  <variable name="Inlet_LOX.Tt"/>
+  <variable name="Inlet_LOX.pt"/>
+  <variable name="LPRES.Altitude"/>
+</boundaries>
+<algebraics>
+  <variable name="CombCha.f_O.p_c"/>
+  <variable name="CombCha.phi"/>
+  <variable name="GasGen.W_F"/>
+  <variable name="GasGen.phi"/>
+  <variable name="Pump_LH2.U"/>
+  <variable name="CombCha.p_out_ch"/>
+  <variable name="ThrustMonitor.M_out"/>
+</algebraics>
+</partitionInfo>

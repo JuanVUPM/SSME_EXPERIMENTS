@@ -1,0 +1,88 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: SSME_simple
+ PARTITION: Ultimo_Intento
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 21/03/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON SSME_simple.Ultimo_Intento
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Junction_LOX.A_in1 = 0.1
+      Junction_LOX.V_in2 = 10
+      Junction_LOX.f_in2.W = 200
+      GasGen_LOX.W_F = 20
+      GasGen_LOX.phi = 7
+      Junction_LH2_1.M_in2 = 0.1
+      Junction_LH2_1.M_out = 0.1
+      Junction_LH2_2.M_in2 = 0.1
+      Junction_LH2_2.M_out = 0.1
+      CombCha.p_out_ch = 100
+      CombCha.A_wet = 1
+      ThrustMonitor.M_out = 10
+      NozzleExt_1.M_r = 10
+      NozzleExt_1.A_wet = 1
+      HighPump_LH2.U = 500
+      HighPump_LOX.U = 500
+      HighPump_LOX2.U = 500
+      LowPump_LH2.U = 500
+      LowPump_LOX.U = 500
+      LPT_LOX.U = 500
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      CombCha.f_O.p_c = 19794856
+      GasGen_LH2.OF = 0.9
+      GasGen_LH2.f_O.p_c = 33046585
+      GasGen_LOX.f_O.p_c = 33046585
+      HPT_LH2.pi = 1.55
+      HPT_LH2.rpm = 34311
+      HPT_LOX.pi = 1.55
+      HPT_LOX.rpm = 22250
+      HighPump_LH2.dp = 39e6
+      HighPump_LH2.f_in.W = 70.31
+      HighPump_LH2.phi = 0.05
+      HighPump_LOX.dp = 25e6
+      HighPump_LOX.phi = 0.05
+      HighPump_LOX2.dp = 20e6
+      HighPump_LOX2.phi = 0.05
+      Inj_F_GG_LOX.f_in.Tt = 148.15
+      Inlet_LH2.Tt = 20
+      Inlet_LH2.pt = 206842.8
+      Inlet_LOX.Tt = 90
+      Inlet_LOX.pt = 689476
+      Junction_LH2_1.M_in1 = 0.1
+      Junction_LH2_2.M_in1 = 0.1
+      Junction_LOX.f_in1.W = 423.65
+      Junction_LOX.p_out = 2.5e6
+      LPRES.Altitude = 0
+      LPT_LH2.f_in.Tt = 265
+      LPT_LH2.pi = 1.33
+      LPT_LH2.rpm = 15519
+      LPT_LOX.dp = 25e6
+      LPT_LOX.phi = 0.05
+      LPT_LOX.rpm = 5018
+      LowPump_LH2.dp = 1.847e6
+      LowPump_LH2.phi = 0.05
+      LowPump_LOX.dp = 2.213e6
+      LowPump_LOX.phi = 0.05
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT

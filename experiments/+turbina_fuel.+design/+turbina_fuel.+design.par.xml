@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Turbina_fuel" partition="Design">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="Injector_1.A"/>
+  <variable name="Injector_2.A"/>
+  <variable name="Turbine_1.A_in"/>
+  <variable name="Turbine_1.r_m"/>
+</noDatas>
+<boundaries>
+  <variable name="GasGen_2.f_F.W"/>
+  <variable name="GasGen_2.f_O.W"/>
+  <variable name="GasGen_2.f_O.p_c"/>
+  <variable name="Inlet_1.Tt"/>
+  <variable name="Inlet_1.pt"/>
+  <variable name="Inlet_2.Tt"/>
+  <variable name="Inlet_2.pt"/>
+  <variable name="Turbine_1.M_2"/>
+  <variable name="Turbine_1.m.Power"/>
+  <variable name="Turbine_1.rpm"/>
+</boundaries>
+<algebraics>
+  <variable name="Turbine_1.U"/>
+</algebraics>
+</partitionInfo>

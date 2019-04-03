@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<tableWindow title="Table_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="Junction_LH2_1.f_in1.pt"/>
+					<var name="Junction_LH2_1.f_in2.pt"/>
+					<var name="Junction_LH2_1.p_in1"/>
+					<var name="Junction_LH2_1.p_in2"/>
+					<var name="Junction_LH2_1.M_in1"/>
+					<var name="Junction_LH2_1.M_in2"/>
+					<var name="Junction_LH2_1.M_out"/>
+					<var name="Junction_LH2_1.f_in1.Tt"/>
+					<var name="Junction_LH2_1.f_in1.W"/>
+					<var name="Junction_LH2_1.f_in2.Tt"/>
+					<var name="Junction_LH2_1.f_in2.W"/>
+					<var name="Junction_LH2_1.f_out.W"/>
+				</table>
+			</tableWindow>
+		</tab>
+	</experimentViews>
+	<watch width="268" height="331" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+				<column name="type" width="100"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="331" width="958" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="normal" height="1008" width="958" posX="961" posY="31" currentTab="Tab_1" />
+</experiment>

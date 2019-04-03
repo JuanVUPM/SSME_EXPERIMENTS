@@ -1,0 +1,35 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: vapor
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 05/03/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON vapor.partition1
+   DECLS
+   OBJECTS
+   INIT
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Inlet_1.Tt = 100
+      Inlet_1.pt = 1000
+      Outlet_1.f.W = 100
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+		Inlet_1.f.fluid[LOX] = 0.5
+		Inlet_1.f.fluid[LH2] =0.5
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT

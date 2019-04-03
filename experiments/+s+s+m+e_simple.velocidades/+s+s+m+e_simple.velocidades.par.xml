@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="SSME_simple" partition="velocidades">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="CombCha.A_th"/>
+  <variable name="CombCha.A_wet"/>
+  <variable name="HPT_LH2.A_in"/>
+  <variable name="HPT_LOX.A_in"/>
+  <variable name="HighPump_LH2.A_in"/>
+  <variable name="HighPump_LH2.r_m"/>
+  <variable name="HighPump_LOX.A_in"/>
+  <variable name="HighPump_LOX.r_m"/>
+  <variable name="HighPump_LOX2.A_in"/>
+  <variable name="HighPump_LOX2.r_m"/>
+  <variable name="Inj_F_CC.A"/>
+  <variable name="Inj_F_GG_LH2.A"/>
+  <variable name="Inj_F_GG_LOX.A"/>
+  <variable name="Inj_O_CC.A"/>
+  <variable name="Inj_O_GG_LH2.A"/>
+  <variable name="Inj_O_GG_LOX.A"/>
+  <variable name="Junction_LH2_1.A_in1"/>
+  <variable name="Junction_LH2_1.A_in2"/>
+  <variable name="Junction_LH2_2.A_in1"/>
+  <variable name="Junction_LH2_2.A_in2"/>
+  <variable name="Junction_LOX.A_in1"/>
+  <variable name="Junction_LOX.A_in2"/>
+  <variable name="LPT_LH2.A_in"/>
+  <variable name="LPT_LOX.A_in"/>
+  <variable name="LPT_LOX.r_m"/>
+  <variable name="LowPump_LH2.A_in"/>
+  <variable name="LowPump_LH2.r_m"/>
+  <variable name="LowPump_LOX.A_in"/>
+  <variable name="LowPump_LOX.r_m"/>
+  <variable name="NozzleExt_1.A_wet"/>
+</noDatas>
+<boundaries>
+  <variable name="GasGen_LH2.OF"/>
+  <variable name="GasGen_LOX.OF"/>
+  <variable name="HPT_LH2.f_in.W"/>
+  <variable name="HPT_LH2.rpm"/>
+  <variable name="HPT_LOX.rpm"/>
+  <variable name="HighPump_LH2.dp"/>
+  <variable name="HighPump_LH2.f_in.W"/>
+  <variable name="HighPump_LH2.phi"/>
+  <variable name="HighPump_LOX.dp"/>
+  <variable name="HighPump_LOX.phi"/>
+  <variable name="HighPump_LOX2.dp"/>
+  <variable name="HighPump_LOX2.phi"/>
+  <variable name="Inj_F_GG_LOX.f_in.Tt"/>
+  <variable name="Inj_O_CC.v_ideal"/>
+  <variable name="Inj_O_GG_LH2.v_ideal"/>
+  <variable name="Inj_O_GG_LOX.v_ideal"/>
+  <variable name="Inlet_LH2.Tt"/>
+  <variable name="Inlet_LH2.pt"/>
+  <variable name="Inlet_LOX.Tt"/>
+  <variable name="Inlet_LOX.pt"/>
+  <variable name="Junction_LH2_1.M_in1"/>
+  <variable name="Junction_LH2_1.f_in1.W"/>
+  <variable name="Junction_LH2_2.M_in1"/>
+  <variable name="Junction_LOX.f_in1.W"/>
+  <variable name="Junction_LOX.f_in2.W"/>
+  <variable name="Junction_LOX.p_out"/>
+  <variable name="LPRES.Altitude"/>
+  <variable name="LPT_LH2.f_in.Tt"/>
+  <variable name="LPT_LH2.rpm"/>
+  <variable name="LPT_LOX.phi"/>
+  <variable name="LPT_LOX.rpm"/>
+  <variable name="LowPump_LH2.dp"/>
+  <variable name="LowPump_LH2.phi"/>
+  <variable name="LowPump_LOX.dp"/>
+  <variable name="LowPump_LOX.phi"/>
+</boundaries>
+<algebraics>
+  <variable name="GasGen_LH2.W_F"/>
+  <variable name="GasGen_LOX.W_F"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_cp]"/>
+  <variable name="Junction_LOX.A_in1"/>
+  <variable name="Junction_LOX.V_in2"/>
+  <variable name="Junction_LH2_1.M_in2"/>
+  <variable name="Junction_LH2_1.M_out"/>
+  <variable name="Junction_LH2_2.M_in2"/>
+  <variable name="Junction_LH2_2.M_out"/>
+  <variable name="CombCha.p_out_ch"/>
+  <variable name="CombCha.M_r"/>
+  <variable name="CombCha.A_wet"/>
+  <variable name="ThrustMonitor.M_out"/>
+  <variable name="NozzleExt_1.M_r"/>
+  <variable name="NozzleExt_1.A_wet"/>
+  <variable name="HighPump_LH2.U"/>
+  <variable name="HighPump_LOX.U"/>
+  <variable name="HighPump_LOX2.U"/>
+  <variable name="LowPump_LH2.U"/>
+  <variable name="LowPump_LOX.U"/>
+  <variable name="LPT_LOX.U"/>
+</algebraics>
+</partitionInfo>

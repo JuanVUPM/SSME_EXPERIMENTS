@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Vapor_libre" partition="Prueba">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<boundaries>
+  <variable name="New_Junction_1.A_out"/>
+  <variable name="New_Junction_1.f_in1.Tt"/>
+  <variable name="New_Junction_1.f_in1.W"/>
+  <variable name="New_Junction_1.f_in1.fluid[Air]"/>
+  <variable name="New_Junction_1.f_in1.fluid[Ar]"/>
+  <variable name="New_Junction_1.f_in1.fluid[CH4]"/>
+  <variable name="New_Junction_1.f_in1.fluid[CO2]"/>
+  <variable name="New_Junction_1.f_in1.fluid[CO]"/>
+  <variable name="New_Junction_1.f_in1.fluid[Comb_prod]"/>
+  <variable name="New_Junction_1.f_in1.fluid[Comb_prod_M]"/>
+  <variable name="New_Junction_1.f_in1.fluid[Comb_prod_cp]"/>
+  <variable name="New_Junction_1.f_in1.fluid[H2O2]"/>
+  <variable name="New_Junction_1.f_in1.fluid[H2O]"/>
+  <variable name="New_Junction_1.f_in1.fluid[H2O_vapour]"/>
+  <variable name="New_Junction_1.f_in1.fluid[H2]"/>
+  <variable name="New_Junction_1.f_in1.fluid[HNO3]"/>
+  <variable name="New_Junction_1.f_in1.fluid[He]"/>
+  <variable name="New_Junction_1.f_in1.fluid[IPA]"/>
+  <variable name="New_Junction_1.f_in1.fluid[JP_10]"/>
+  <variable name="New_Junction_1.f_in1.fluid[Kerox]"/>
+  <variable name="New_Junction_1.f_in1.fluid[LCH4]"/>
+  <variable name="New_Junction_1.f_in1.fluid[LF2]"/>
+  <variable name="New_Junction_1.f_in1.fluid[LH2]"/>
+  <variable name="New_Junction_1.f_in1.fluid[LOX]"/>
+  <variable name="New_Junction_1.f_in1.fluid[MMH]"/>
+  <variable name="New_Junction_1.f_in1.fluid[MMH_vapour]"/>
+  <variable name="New_Junction_1.f_in1.fluid[N2H4]"/>
+  <variable name="New_Junction_1.f_in1.fluid[N2]"/>
+  <variable name="New_Junction_1.f_in1.fluid[NH3]"/>
+  <variable name="New_Junction_1.f_in1.fluid[NTO]"/>
+  <variable name="New_Junction_1.f_in1.fluid[O2]"/>
+  <variable name="New_Junction_1.f_in1.fluid[Oil]"/>
+  <variable name="New_Junction_1.f_in1.fluid[RP_1]"/>
+  <variable name="New_Junction_1.f_in1.fluid[UDMH]"/>
+  <variable name="New_Junction_1.f_in2.Tt"/>
+  <variable name="New_Junction_1.f_in2.fluid[Air]"/>
+  <variable name="New_Junction_1.f_in2.fluid[Ar]"/>
+  <variable name="New_Junction_1.f_in2.fluid[CH4]"/>
+  <variable name="New_Junction_1.f_in2.fluid[CO2]"/>
+  <variable name="New_Junction_1.f_in2.fluid[CO]"/>
+  <variable name="New_Junction_1.f_in2.fluid[Comb_prod]"/>
+  <variable name="New_Junction_1.f_in2.fluid[Comb_prod_M]"/>
+  <variable name="New_Junction_1.f_in2.fluid[Comb_prod_cp]"/>
+  <variable name="New_Junction_1.f_in2.fluid[H2O2]"/>
+  <variable name="New_Junction_1.f_in2.fluid[H2O]"/>
+  <variable name="New_Junction_1.f_in2.fluid[H2O_vapour]"/>
+  <variable name="New_Junction_1.f_in2.fluid[H2]"/>
+  <variable name="New_Junction_1.f_in2.fluid[HNO3]"/>
+  <variable name="New_Junction_1.f_in2.fluid[He]"/>
+  <variable name="New_Junction_1.f_in2.fluid[IPA]"/>
+  <variable name="New_Junction_1.f_in2.fluid[JP_10]"/>
+  <variable name="New_Junction_1.f_in2.fluid[Kerox]"/>
+  <variable name="New_Junction_1.f_in2.fluid[LCH4]"/>
+  <variable name="New_Junction_1.f_in2.fluid[LF2]"/>
+  <variable name="New_Junction_1.f_in2.fluid[LH2]"/>
+  <variable name="New_Junction_1.f_in2.fluid[LOX]"/>
+  <variable name="New_Junction_1.f_in2.fluid[MMH]"/>
+  <variable name="New_Junction_1.f_in2.fluid[MMH_vapour]"/>
+  <variable name="New_Junction_1.f_in2.fluid[N2H4]"/>
+  <variable name="New_Junction_1.f_in2.fluid[N2]"/>
+  <variable name="New_Junction_1.f_in2.fluid[NH3]"/>
+  <variable name="New_Junction_1.f_in2.fluid[NTO]"/>
+  <variable name="New_Junction_1.f_in2.fluid[O2]"/>
+  <variable name="New_Junction_1.f_in2.fluid[Oil]"/>
+  <variable name="New_Junction_1.f_in2.fluid[RP_1]"/>
+  <variable name="New_Junction_1.f_in2.fluid[UDMH]"/>
+  <variable name="Outlet_1.Tt"/>
+  <variable name="Outlet_1.pt"/>
+</boundaries>
+<algebraics>
+  <variable name="Outlet_1.g.W"/>
+  <variable name="New_Junction_1.f_in2.pt"/>
+</algebraics>
+</partitionInfo>

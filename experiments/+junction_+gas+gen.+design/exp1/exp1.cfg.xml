@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+			<tableWindow title="Table_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="Junction_la_buena_1.A_in1"/>
+					<var name="Junction_la_buena_1.A_in2"/>
+					<var name="Junction_la_buena_1.A_out"/>
+					<var name="Junction_la_buena_1.M_in1"/>
+					<var name="Junction_la_buena_1.M_in2"/>
+					<var name="Junction_la_buena_1.M_out"/>
+					<var name="Junction_la_buena_1.TPL"/>
+					<var name="Junction_la_buena_1.T_in1"/>
+					<var name="Junction_la_buena_1.T_in2"/>
+					<var name="Junction_la_buena_1.T_out"/>
+					<var name="Junction_la_buena_1.Type"/>
+					<var name="Junction_la_buena_1.V_in1"/>
+					<var name="Junction_la_buena_1.V_in2"/>
+					<var name="Junction_la_buena_1.V_out"/>
+					<var name="Junction_la_buena_1.f_in1.Tt"/>
+					<var name="Junction_la_buena_1.f_in1.W"/>
+					<var name="Junction_la_buena_1.f_in1.pt"/>
+					<var name="Junction_la_buena_1.f_in2.Tt"/>
+					<var name="Junction_la_buena_1.f_in2.W"/>
+					<var name="Junction_la_buena_1.f_in2.pt"/>
+					<var name="Junction_la_buena_1.f_out.Tt"/>
+					<var name="Junction_la_buena_1.f_out.W"/>
+					<var name="Junction_la_buena_1.f_out.pt"/>
+					<var name="Junction_la_buena_1.p_in1"/>
+					<var name="Junction_la_buena_1.p_in2"/>
+					<var name="Junction_la_buena_1.p_out"/>
+					<var name="Junction_la_buena_1.pt_out"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[Air]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[Ar]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[CH4]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[CO2]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[CO]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[Comb_prod]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[Comb_prod_M]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[Comb_prod_cp]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[H2O2]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[H2O]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[H2O_vapour]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[H2]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[HNO3]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[He]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[IPA]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[JP_10]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[Kerox]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[LCH4]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[LF2]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[LH2]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[LOX]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[MMH]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[MMH_vapour]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[N2H4]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[N2]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[NH3]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[NTO]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[O2]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[Oil]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[RP_1]"/>
+					<var name="Junction_la_buena_1.f_in1.fluid[UDMH]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[Air]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[Ar]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[CH4]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[CO2]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[CO]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[Comb_prod]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[Comb_prod_M]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[Comb_prod_cp]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[H2O2]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[H2O]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[H2O_vapour]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[H2]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[HNO3]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[He]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[IPA]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[JP_10]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[Kerox]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[LCH4]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[LF2]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[LH2]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[LOX]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[MMH]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[MMH_vapour]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[N2H4]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[N2]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[NH3]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[NTO]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[O2]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[Oil]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[RP_1]"/>
+					<var name="Junction_la_buena_1.f_in2.fluid[UDMH]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[Air]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[Ar]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[CH4]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[CO2]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[CO]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[Comb_prod]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[Comb_prod_M]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[Comb_prod_cp]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[H2O2]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[H2O]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[H2O_vapour]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[H2]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[HNO3]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[He]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[IPA]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[JP_10]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[Kerox]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[LCH4]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[LF2]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[LH2]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[LOX]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[MMH]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[MMH_vapour]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[N2H4]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[N2]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[NH3]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[NTO]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[O2]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[Oil]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[RP_1]"/>
+					<var name="Junction_la_buena_1.f_out.fluid[UDMH]"/>
+				</table>
+			</tableWindow>
+		</tab>
+	</experimentViews>
+	<watch width="268" height="192" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+			</tab> 
+			<tab name="view"> 
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+				<column name="type" width="100"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="192" width="1920" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
+</experiment>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment version="1.4.0">
+	<experimentViews>
+		<tab name="Tab_1">
+				</tab>
+	</experimentViews>
+	<watch width="887" height="192" visible="true" pos="right" >
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial"> 
+			</tab> 
+			<tab name="inputs"> 
+				<var name="Inlet_2.f.pt" value="1100000"/>
+				<var name="Junction_la_buena_1.M_in1" value="0.3"/>
+				<var name="Inlet_2.f.Tt" value="350"/>
+				<var name="Inlet_2.W" value="10"/>
+			</tab> 
+			<tab name="view"> 
+				<var name="Junction_la_buena_1.M_in2"/>
+				<var name="Junction_la_buena_1.p_in1"/>
+				<var name="gamma_in1"/>
+				<var name="gamma_in2"/>
+				<var name="gamma_out"/>
+				<var name="Inlet_1.f.fluid[He]"/>
+				<var name="Inlet_2.f.fluid[O2]"/>
+				<var name="Junction_la_buena_1.f_out.fluid[He]"/>
+				<var name="Junction_la_buena_1.f_out.fluid[O2]"/>
+				<var name="Junction_la_buena_1.V_out"/>
+				<var name="V_media"/>
+				<var name="Junction_la_buena_1.V_in1"/>
+				<var name="Junction_la_buena_1.V_in2"/>
+			</tab> 
+		</variables>
+		<layout>
+			<tab name="initial"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+				<column name="type" width="100"/> 
+			</tab> 
+			<tab name="inputs"> 
+				<column name="name" width="100"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="100"/> 
+			</tab> 
+			<tab name="view"> 
+				<column name="name" width="199"/> 
+				<column name="value" width="100"/> 
+				<column name="units" width="100"/> 
+				<column name="category" width="180"/> 
+			</tab> 
+		</layout>
+	</watch>
+	<outputWindow height="192" width="1193" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+
+	<mainWindow  mode="normal" height="966" width="1193" posX="8" posY="31" currentTab="Tab_1" />
+</experiment>

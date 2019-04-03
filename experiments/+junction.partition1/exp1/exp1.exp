@@ -1,0 +1,42 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: Junction
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 19/03/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON Junction.partition1
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Junction_1.M_in2 = 0.3
+      Junction_1.M_out = 0.3
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Inlet_1.Tt = 247.900
+      Inlet_1.pt = 21311703
+      Inlet_2.Tt = 905.74
+      Inlet_2.pt = 21311703
+      Junction_1.M_in1 = 0.1
+      Junction_1.f_in1.W = 13.43
+      Junction_1.f_in2.W = 117.43
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT

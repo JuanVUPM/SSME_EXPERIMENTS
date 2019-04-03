@@ -1,0 +1,40 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: vapor
+ PARTITION: partition3
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 05/03/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON vapor.partition3
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Outlet_1.f.W = 20
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Inlet_1.Tt = 300
+      Inlet_1.pt = 300000
+      Inlet_1_1.Tt = 300
+      New_Junction_1.A_out = 1
+      New_Junction_1.f_in2.W = 10
+      Outlet_1.Tt = 300
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT

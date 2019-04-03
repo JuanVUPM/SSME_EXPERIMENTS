@@ -1,0 +1,50 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: Junction_GasGen
+ PARTITION: Design
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 04/03/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON Junction_GasGen.Design
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Junction_la_buena_1.M_in2 = 0.3
+      Junction_la_buena_1.M_out = 0.3
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      GasGen_1.f_F.W = 10
+      GasGen_1.f_O.W = 160
+      GasGen_1.f_O.p_c = 5500000
+      GasGen_2.f_F.W = 10
+      GasGen_2.f_O.W = 30
+      GasGen_2.f_O.p_c = 5500000
+      Inlet_1.Tt = 288.15
+      Inlet_1.pt = 5700000
+      Inlet_2.Tt = 288.15
+      Inlet_2.pt = 5600000
+      Inlet_3.Tt = 288.15
+      Inlet_3.pt = 5700000
+      Inlet_4.Tt = 288.15
+      Inlet_4.pt = 5600000
+      Junction_la_buena_1.M_in1 = 0.3
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT

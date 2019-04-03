@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Junction" partition="DesignIncompressible">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="Junction_la_buena_1.A_in1"/>
+  <variable name="Junction_la_buena_1.A_in2"/>
+</noDatas>
+<boundaries>
+  <variable name="Inlet_1.Tt"/>
+  <variable name="Inlet_1.pt"/>
+  <variable name="Inlet_2.Tt"/>
+  <variable name="Inlet_2.pt"/>
+  <variable name="Junction_la_buena_1.f_in1.W"/>
+  <variable name="Junction_la_buena_1.f_in2.W"/>
+  <variable name="Outlet.pt"/>
+</boundaries>
+<algebraics>
+  <variable name="Junction_la_buena_1.A_in1"/>
+  <variable name="Junction_la_buena_1.V_in2"/>
+</algebraics>
+</partitionInfo>

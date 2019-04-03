@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.1">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="Junction.eds"/>
+  <file name="Junction_GasGen.eds"/>
+  <file name="Turbina_fuel.eds"/>
+  <file name="vapor.eds"/>
+  <file name="Vapor_libre.eds"/>
+  <file name="Staged_Combustion.eds"/>
+  <file name="REaccion.eds"/>
+  <file name="SSME_simple.eds"/>
+  <file name="Cooling_Test.eds"/>
+  <file name="Cooling_Testx2.eds"/>
+  <file name="SSME_ajuste.eds"/>
+ </filedeps>
+ <libdeps>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+</library>

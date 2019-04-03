@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Junction_GasGen" partition="Prueba">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<boundaries>
+  <variable name="Inlet_1.Tt"/>
+  <variable name="Inlet_1.pt"/>
+  <variable name="Inlet_2.Tt"/>
+  <variable name="Inlet_2.pt"/>
+  <variable name="Inlet_3.Tt"/>
+  <variable name="Inlet_3.pt"/>
+  <variable name="Inlet_4.Tt"/>
+  <variable name="Inlet_4.pt"/>
+  <variable name="Outlet.Tt"/>
+  <variable name="Outlet.pt"/>
+</boundaries>
+<algebraics>
+  <variable name="GasGen_1.W_F"/>
+  <variable name="GasGen_2.W_F"/>
+  <variable name="Junction_la_buena_1.M_in2"/>
+  <variable name="Junction_la_buena_1.M_out"/>
+  <variable name="Turbine_1.M_2"/>
+  <variable name="Turbine_1.U"/>
+</algebraics>
+</partitionInfo>

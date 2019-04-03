@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="REaccion" partition="partition1">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="Injector_1.A"/>
+  <variable name="Injector_2.A"/>
+</noDatas>
+<boundaries>
+  <variable name="GasGen_1.OF"/>
+  <variable name="GasGen_1.g.W"/>
+  <variable name="GasGen_1.g.pt"/>
+  <variable name="Inlet_LH2.Tt"/>
+  <variable name="Inlet_LH2.pt"/>
+  <variable name="Inlet_LOX.Tt"/>
+  <variable name="Inlet_LOX.pt"/>
+</boundaries>
+<algebraics>
+  <variable name="GasGen_1.W_F"/>
+</algebraics>
+</partitionInfo>

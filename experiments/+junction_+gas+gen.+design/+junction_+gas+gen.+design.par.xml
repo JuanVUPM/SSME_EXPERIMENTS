@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Junction_GasGen" partition="Design">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="Injector_1.A"/>
+  <variable name="Injector_2.A"/>
+  <variable name="Injector_3.A"/>
+  <variable name="Injector_4.A"/>
+  <variable name="Junction_la_buena_1.A_in1"/>
+  <variable name="Junction_la_buena_1.A_in2"/>
+</noDatas>
+<boundaries>
+  <variable name="GasGen_1.f_F.W"/>
+  <variable name="GasGen_1.f_O.W"/>
+  <variable name="GasGen_1.f_O.p_c"/>
+  <variable name="GasGen_2.f_F.W"/>
+  <variable name="GasGen_2.f_O.W"/>
+  <variable name="GasGen_2.f_O.p_c"/>
+  <variable name="Inlet_1.Tt"/>
+  <variable name="Inlet_1.pt"/>
+  <variable name="Inlet_2.Tt"/>
+  <variable name="Inlet_2.pt"/>
+  <variable name="Inlet_3.Tt"/>
+  <variable name="Inlet_3.pt"/>
+  <variable name="Inlet_4.Tt"/>
+  <variable name="Inlet_4.pt"/>
+  <variable name="Junction_la_buena_1.M_in1"/>
+</boundaries>
+<algebraics>
+  <variable name="Junction_la_buena_1.M_in2"/>
+  <variable name="Junction_la_buena_1.M_out"/>
+</algebraics>
+</partitionInfo>

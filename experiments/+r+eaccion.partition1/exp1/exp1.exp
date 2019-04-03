@@ -1,0 +1,41 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: REaccion
+ PARTITION: partition1
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 12/03/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON REaccion.partition1
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      GasGen_1.W_F = 0.5
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      GasGen_1.OF = 8
+      GasGen_1.g.W = 10
+      GasGen_1.g.pt = 1e6
+      Inlet_LH2.Tt = 288.15
+      Inlet_LH2.pt = 1.01e6
+      Inlet_LOX.Tt = 288.15
+      Inlet_LOX.pt = 1.01e6
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT
