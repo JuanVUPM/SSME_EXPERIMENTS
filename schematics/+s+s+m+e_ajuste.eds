@@ -31,7 +31,7 @@
 		<label cx="47.5" cy="12" dx="-1.4995" dy="186" />
 	
 		<instanceData>
-			<datum id="eta_d" value="0.6" pos="D" />
+			<datum id="eta_d" value="0.55" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -171,7 +171,7 @@
 		<label cx="49" cy="12" dx="124" dy="639.036" />
 	
 		<instanceData>
-			<datum id="eta_d" value="0.6" pos="D" />
+			<datum id="eta_d" value="0.77" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -184,7 +184,7 @@
 	
 		<instanceData>
 			<datum id="Type" value="Known_dp" pos="P" />
-			<datum id="dp" value="12e6" pos="D" />
+			<datum id="dp" value="12.e6" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -234,7 +234,7 @@
 		<label cx="30.5" cy="12" dx="257.5" dy="132" />
 	
 		<instanceData>
-			<datum id="eta_d" value=".7" pos="D" />
+			<datum id="eta_d" value=".62" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -259,7 +259,7 @@
 	
 		<instanceData>
 			<datum id="eta_d" value="1" pos="D" />
-			<datum id="Q_comb" value="16000000" pos="D" />
+			<datum id="Q_comb" value="14700000" pos="D" />
 			<datum id="cp_P" value="3500" pos="D" />
 			<datum id="M_P" value="15" pos="D" />
 		</instanceData>
@@ -321,7 +321,7 @@
 		<label cx="49.5" cy="12" dx="883.5" dy="479.036" />
 	
 		<instanceData>
-			<datum id="eta_d" value="0.6" pos="D" />
+			<datum id="eta_d" value="0.65" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -355,6 +355,10 @@
 		<symbol cx="250" cy="153.75" sx="109" sy="92.5" dx="618" dy="-14" onLabel="true" />
 	
 		<label cx="31" cy="12" dx="831" dy="183.5" />
+	
+		<instanceData>
+			<datum id="eta_d" value="0.75" pos="D" />
+		</instanceData>
 	
 	</component>
 
@@ -390,7 +394,7 @@
 		<label cx="53" cy="12" dx="690.482" dy="433.518" />
 	
 		<instanceData>
-			<datum id="eta_d" value="0.6" pos="D" />
+			<datum id="eta_d" value="0.65" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -407,103 +411,103 @@
 	
 	</component>
 
-	<connector id="Connector_1" sShape="Inlet_LH2" sPort="f" eShape="LowPump_LH2" ePort="f_in" elPosition="0" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_1" sShape="Inlet_LH2" sPort="f" eShape="LowPump_LH2" ePort="f_in" elPosition="0" lineColor="255,0,0"   />
 
-	<connector id="Connector_2" sShape="Inlet_LOX" sPort="f" eShape="LowPump_LOX" ePort="f_in" elPosition="1" dx="10" dy="10" lineColor="0,255,0"   />
+	<connector id="Connector_2" sShape="Inlet_LOX" sPort="f" eShape="LowPump_LOX" ePort="f_in" elPosition="1" lineColor="0,255,0"   />
 
-	<connector id="Connector_9" sShape="Inj_O_GG_LOX" sPort="f_out" eShape="GasGen_LOX" ePort="f_O" elPosition="2" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_9" sShape="Inj_O_GG_LOX" sPort="f_out" eShape="GasGen_LOX" ePort="f_O" elPosition="2" lineColor="85,255,0"   />
 
-	<connector id="Connector_13" sShape="Inj_F_CC" sPort="f_out" eShape="CombCha" ePort="f_F" elPosition="3" dx="10" dy="10"  />
+	<connector id="Connector_13" sShape="Inj_F_CC" sPort="f_out" eShape="CombCha" ePort="f_F" elPosition="3"  />
 
-	<connector id="Connector_14" sShape="Inj_O_CC" sPort="f_out" eShape="CombCha" ePort="f_O" elPosition="4" dx="10" dy="10"  />
+	<connector id="Connector_14" sShape="Inj_O_CC" sPort="f_out" eShape="CombCha" ePort="f_O" elPosition="4"  />
 
-	<connector id="Connector_15" sShape="FlowMeter_1" sPort="f_out" eShape="Inj_F_CC" ePort="f_in" elPosition="5" dx="10" dy="10"  />
+	<connector id="Connector_15" sShape="FlowMeter_1" sPort="f_out" eShape="Inj_F_CC" ePort="f_in" elPosition="5"  />
 
-	<connector id="Connector_16" sShape="FlowMeter_2" sPort="f_out" eShape="Inj_O_CC" ePort="f_in" points="616,532"  intermediate2="1" elPosition="6" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_16" sShape="FlowMeter_2" sPort="f_out" eShape="Inj_O_CC" ePort="f_in" points="626,542"  intermediate2="1" elPosition="6" lineColor="85,255,0"   />
 
-	<connector id="Connector_18" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="1372,920"  intermediate1="1" elPosition="7" dx="10" dy="10"  />
+	<connector id="Connector_18" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="1382,930"  intermediate1="1" elPosition="7"  />
 
-	<connector id="Connector_19" sShape="CombCha" sPort="i" eShape="ControlPanel_1" ePort="i_Comb" points="632,708"  intermediate1="1" elPosition="8" dx="10" dy="10" lineWidth="0.5" lineType="2"   />
+	<connector id="Connector_19" sShape="CombCha" sPort="i" eShape="ControlPanel_1" ePort="i_Comb" points="642,718"  intermediate1="1" elPosition="8" lineWidth="0.5" lineType="2"   />
 
-	<connector id="Connector_20" sShape="FlowMeter_1" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="496,496 496,728 1536,728"  intermediate1="1" elPosition="9" dx="10" dy="10" lineWidth="0.5" lineType="2"   />
+	<connector id="Connector_20" sShape="FlowMeter_1" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="506,506 506,738 1546,738"  intermediate1="1" elPosition="9" lineWidth="0.5" lineType="2"   />
 
-	<connector id="Connector_21" sShape="FlowMeter_2" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="648,472 1464,472 1464,720"  intermediate1="1" elPosition="10" dx="10" dy="10" lineWidth="0.5" lineType="2"   />
+	<connector id="Connector_21" sShape="FlowMeter_2" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="658,482 1474,482 1474,730"  intermediate1="1" elPosition="10" lineWidth="0.5" lineType="2"   />
 
-	<connector id="Connector_4" sShape="LowPump_LH2" sPort="f_out" eShape="HighPump_LH2" ePort="f_in" points="112,600"  intermediate2="1" elPosition="11" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_4" sShape="LowPump_LH2" sPort="f_out" eShape="HighPump_LH2" ePort="f_in" points="122,610"  intermediate2="1" elPosition="11" lineColor="255,0,0"   />
 
-	<connector id="Connector_5" sShape="CombCha" sPort="h" eShape="CoolingJacket_CC" ePort="h" points="520,716 520,656"  intermediate2="2" elPosition="12" dx="10" dy="10"  />
+	<connector id="Connector_5" sShape="CombCha" sPort="h" eShape="CoolingJacket_CC" ePort="h" points="530,726 530,666"  intermediate2="2" elPosition="12"  />
 
-	<connector id="Connector_17" sShape="CombCha" sPort="g" eShape="NozzleExt_1" ePort="g_in" elPosition="13" dx="10" dy="10"  />
+	<connector id="Connector_17" sShape="CombCha" sPort="g" eShape="NozzleExt_1" ePort="g_in" elPosition="13"  />
 
-	<connector id="Connector_3" sShape="NozzleExt_1" sPort="g_out" eShape="ThrustMonitor" ePort="g" points="1308,872"  intermediate2="1" elPosition="14" dx="10" dy="10"  />
+	<connector id="Connector_3" sShape="NozzleExt_1" sPort="g_out" eShape="ThrustMonitor" ePort="g" points="1318,882"  intermediate2="1" elPosition="14"  />
 
-	<connector id="Connector_6" sShape="HighPump_LH2" sPort="f_out" eShape="SF_LH2_1" ePort="f_in" points="252,600"  intermediate2="1" elPosition="15" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_6" sShape="HighPump_LH2" sPort="f_out" eShape="SF_LH2_1" ePort="f_in" points="262,610"  intermediate2="1" elPosition="15" lineColor="255,0,0"   />
 
-	<connector id="Connector_7" sShape="LPT_LH2" sPort="m" eShape="LowPump_LH2" ePort="m" points="344,8 160,8"  intermediate2="2" elPosition="16" dx="10" dy="10"  />
+	<connector id="Connector_7" sShape="LPT_LH2" sPort="m" eShape="LowPump_LH2" ePort="m" points="354,18 170,18"  intermediate2="2" elPosition="16"  />
 
-	<connector id="Connector_8" sShape="CoolingJacket_CC" sPort="g" eShape="LPT_LH2" ePort="f_in" points="512,120" elPosition="17" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_8" sShape="CoolingJacket_CC" sPort="g" eShape="LPT_LH2" ePort="f_in" points="522,130" elPosition="17" lineColor="255,0,0"   />
 
-	<connector id="Connector_11" sShape="NozzleExt_1" sPort="h" eShape="CoolingJacket_NE" ePort="h" elPosition="18" dx="10" dy="10"  />
+	<connector id="Connector_11" sShape="NozzleExt_1" sPort="h" eShape="CoolingJacket_NE" ePort="h" elPosition="18"  />
 
-	<connector id="Connector_12" sShape="SF_LH2_1" sPort="f_out" eShape="CoolingJacket_NE" ePort="l" points="240,676 240,892" elPosition="19" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_12" sShape="SF_LH2_1" sPort="f_out" eShape="CoolingJacket_NE" ePort="l" points="250,686 250,902" elPosition="19" lineColor="255,0,0"   />
 
-	<connector id="Connector_22" sShape="SF_LH2_1" sPort="f_b" eShape="CoolingJacket_CC" ePort="l" points="288,704"  intermediate2="1" elPosition="20" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_22" sShape="SF_LH2_1" sPort="f_b" eShape="CoolingJacket_CC" ePort="l" points="298,714"  intermediate2="1" elPosition="20" lineColor="255,0,0"   />
 
-	<connector id="Connector_10" sShape="Inj_F_GG_LOX" sPort="f_out" eShape="GasGen_LOX" ePort="f_F" elPosition="21" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_10" sShape="Inj_F_GG_LOX" sPort="f_out" eShape="GasGen_LOX" ePort="f_F" elPosition="21" lineColor="85,255,0"   />
 
-	<connector id="Connector_23" sShape="Inj_O_GG_LH2" sPort="f_out" eShape="GasGen_LH2" ePort="f_O" elPosition="22" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_23" sShape="Inj_O_GG_LH2" sPort="f_out" eShape="GasGen_LH2" ePort="f_O" elPosition="22" lineColor="85,255,0"   />
 
-	<connector id="Connector_24" sShape="Inj_F_GG_LH2" sPort="f_out" eShape="GasGen_LH2" ePort="f_F" elPosition="23" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_24" sShape="Inj_F_GG_LH2" sPort="f_out" eShape="GasGen_LH2" ePort="f_F" elPosition="23" lineColor="255,0,0"   />
 
-	<connector id="Connector_26" sShape="SF_LH2_2" sPort="f_out" eShape="Inj_F_GG_LH2" ePort="f_in" points="424,28"  intermediate1="1" elPosition="24" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_26" sShape="SF_LH2_2" sPort="f_out" eShape="Inj_F_GG_LH2" ePort="f_in" points="434,38"  intermediate1="1" elPosition="24" lineColor="255,0,0"   />
 
-	<connector id="Connector_27" sShape="SF_LH2_2" sPort="f_b" eShape="Inj_F_GG_LOX" ePort="f_in" points="624,64"  intermediate2="1" elPosition="25" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_27" sShape="SF_LH2_2" sPort="f_b" eShape="Inj_F_GG_LOX" ePort="f_in" points="634,74"  intermediate2="1" elPosition="25" lineColor="255,0,0"   />
 
-	<connector id="Connector_25" sShape="CoolingJacket_NE" sPort="g" eShape="SF_LH2_2" ePort="f_in" points="408,784 408,536 480,536 480,384 544,384 544,144 544,104"  intermediate1="9" elPosition="26" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_25" sShape="CoolingJacket_NE" sPort="g" eShape="SF_LH2_2" ePort="f_in" points="418,794 418,546 490,546 490,394 554,394 554,154 554,114"  intermediate1="9" elPosition="26" lineColor="255,0,0"   />
 
-	<connector id="Connector_28" sShape="GasGen_LH2" sPort="g" eShape="HPT_LH2" ePort="f_in" points="360,344"  intermediate2="1" elPosition="27" dx="10" dy="10" lineColor="255,170,0"   />
+	<connector id="Connector_28" sShape="GasGen_LH2" sPort="g" eShape="HPT_LH2" ePort="f_in" points="370,354"  intermediate2="1" elPosition="27" lineColor="255,170,0"   />
 
-	<connector id="Connector_29" sShape="HPT_LH2" sPort="m" eShape="HighPump_LH2" ePort="m" points="352,296 352,240 128,240 128,552"  intermediate1="1" elPosition="28" dx="10" dy="10"  />
+	<connector id="Connector_29" sShape="HPT_LH2" sPort="m" eShape="HighPump_LH2" ePort="m" points="362,306 362,250 138,250 138,562"  intermediate1="1" elPosition="28"  />
 
-	<connector id="Connector_30" sShape="HPT_LH2" sPort="f_out" eShape="Junction_LH2_1" ePort="f_in2" points="240,372" elPosition="29" dx="10" dy="10" lineColor="255,170,0"   />
+	<connector id="Connector_30" sShape="HPT_LH2" sPort="f_out" eShape="Junction_LH2_1" ePort="f_in2" points="250,382" elPosition="29" lineColor="255,170,0"   />
 
-	<connector id="Connector_33" sShape="Junction_LH2_1" sPort="f_out" eShape="Junction_LH2_2" ePort="f_in1" points="200,412"  intermediate1="1" elPosition="30" dx="10" dy="10" lineColor="255,151,5"   />
+	<connector id="Connector_33" sShape="Junction_LH2_1" sPort="f_out" eShape="Junction_LH2_2" ePort="f_in1" points="210,422"  intermediate1="1" elPosition="30" lineColor="255,151,5"   />
 
-	<connector id="Connector_34" sShape="Junction_LH2_2" sPort="f_out" eShape="FlowMeter_1" ePort="f_in" elPosition="31" dx="10" dy="10" lineColor="255,85,0"   />
+	<connector id="Connector_34" sShape="Junction_LH2_2" sPort="f_out" eShape="FlowMeter_1" ePort="f_in" elPosition="31" lineColor="255,85,0"   />
 
-	<connector id="Connector_36" sShape="HighPump_LOX" sPort="f_out" eShape="SF_LOX_1" ePort="f_in" points="880,508"  intermediate2="1" elPosition="32" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_36" sShape="HighPump_LOX" sPort="f_out" eShape="SF_LOX_1" ePort="f_in" points="890,518"  intermediate2="1" elPosition="32" lineColor="85,255,0"   />
 
-	<connector id="Connector_37" sShape="SF_LOX_2" sPort="f_out" eShape="FlowMeter_2" ePort="f_in" points="692,508 692,504"  intermediate2="1" elPosition="33" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_37" sShape="SF_LOX_2" sPort="f_out" eShape="FlowMeter_2" ePort="f_in" points="702,518 702,514"  intermediate2="1" elPosition="33" lineColor="85,255,0"   />
 
-	<connector id="Connector_38" sShape="SF_LOX_1" sPort="f_out" eShape="SF_LOX_2" ePort="f_in" elPosition="34" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_38" sShape="SF_LOX_1" sPort="f_out" eShape="SF_LOX_2" ePort="f_in" elPosition="34" lineColor="85,255,0"   />
 
-	<connector id="Connector_39" sShape="SF_LOX_1" sPort="f_b" eShape="LPT_LOX" ePort="f_in" points="824,468 776,468 776,88 808,88"  intermediate1="1" elPosition="35" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_39" sShape="SF_LOX_1" sPort="f_b" eShape="LPT_LOX" ePort="f_in" points="834,478 786,478 786,98 818,98"  intermediate1="1" elPosition="35" lineColor="85,255,0"   />
 
-	<connector id="Connector_40" sShape="LPT_LOX" sPort="m" eShape="LowPump_LOX" ePort="m" points="808,160 744,160 744,32 952,32"  intermediate1="1" elPosition="36" dx="10" dy="10"  />
+	<connector id="Connector_40" sShape="LPT_LOX" sPort="m" eShape="LowPump_LOX" ePort="m" points="818,170 754,170 754,42 962,42"  intermediate1="1" elPosition="36"  />
 
-	<connector id="Connector_32" sShape="GasGen_LOX" sPort="g" eShape="HPT_LOX" ePort="f_in" points="792,344 792,256" elPosition="37" dx="10" dy="10" lineColor="255,170,0"   />
+	<connector id="Connector_32" sShape="GasGen_LOX" sPort="g" eShape="HPT_LOX" ePort="f_in" points="802,354 802,266" elPosition="37" lineColor="255,170,0"   />
 
-	<connector id="Connector_43" sShape="HPT_LOX" sPort="f_out" eShape="Junction_LH2_2" ePort="f_in2" points="944,412"  intermediate1="1" elPosition="38" dx="10" dy="10" lineColor="255,170,0"   />
+	<connector id="Connector_43" sShape="HPT_LOX" sPort="f_out" eShape="Junction_LH2_2" ePort="f_in2" points="954,422"  intermediate1="1" elPosition="38" lineColor="255,170,0"   />
 
-	<connector id="Connector_44" sShape="SF_LOX_2" sPort="f_b" eShape="HighPump_LOX2" ePort="f_in" elPosition="39" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_44" sShape="SF_LOX_2" sPort="f_b" eShape="HighPump_LOX2" ePort="f_in" elPosition="39" lineColor="85,255,0"   />
 
-	<connector id="Connector_45" sShape="HighPump_LOX2" sPort="f_out" eShape="SF_LOX_3" ePort="f_in" points="728,120"  intermediate2="1" elPosition="40" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_45" sShape="HighPump_LOX2" sPort="f_out" eShape="SF_LOX_3" ePort="f_in" points="738,130"  intermediate2="1" elPosition="40" lineColor="85,255,0"   />
 
-	<connector id="Connector_46" sShape="SF_LOX_3" sPort="f_b" eShape="Inj_O_GG_LOX" ePort="f_in" points="656,84"  intermediate1="1" elPosition="41" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_46" sShape="SF_LOX_3" sPort="f_b" eShape="Inj_O_GG_LOX" ePort="f_in" points="666,94"  intermediate1="1" elPosition="41" lineColor="85,255,0"   />
 
-	<connector id="Connector_47" sShape="SF_LOX_3" sPort="f_out" eShape="Inj_O_GG_LH2" ePort="f_in" points="720,8 392,8" elPosition="42" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_47" sShape="SF_LOX_3" sPort="f_out" eShape="Inj_O_GG_LH2" ePort="f_in" points="730,18 402,18" elPosition="42" lineColor="85,255,0"   />
 
-	<connector id="Connector_48" sShape="HPT_LOX" sPort="m" eShape="HighPump_LOX2" ePort="m" points="824.767,311.325 823.137,311.325 824,384" elPosition="43" dx="10" dy="10"  />
+	<connector id="Connector_48" sShape="HPT_LOX" sPort="m" eShape="HighPump_LOX2" ePort="m" points="834.767,321.325 833.137,321.325 834,394" elPosition="43"  />
 
-	<connector id="Connector_49" sShape="HighPump_LOX" sPort="m" eShape="HPT_LOX" ePort="m" points="928,384 824,384" elPosition="44" dx="10" dy="10"  />
+	<connector id="Connector_49" sShape="HighPump_LOX" sPort="m" eShape="HPT_LOX" ePort="m" points="938,394 834,394" elPosition="44"  />
 
-	<connector id="Connector_31" sShape="LPT_LH2" sPort="f_out" eShape="Junction_LH2_1" ePort="f_in1" points="224,120 224,224 144,224 144,372" elPosition="45" dx="10" dy="10" lineColor="255,0,0"   />
+	<connector id="Connector_31" sShape="LPT_LH2" sPort="f_out" eShape="Junction_LH2_1" ePort="f_in1" points="234,130 234,234 154,234 154,382" elPosition="45" lineColor="255,0,0"   />
 
-	<connector id="Connector_35" sShape="LowPump_LOX" sPort="f_out" eShape="Junction_LOX" ePort="f_in1" points="1000,180"  intermediate2="1" elPosition="46" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_35" sShape="LowPump_LOX" sPort="f_out" eShape="Junction_LOX" ePort="f_in1" points="1010,190"  intermediate2="1" elPosition="46" lineColor="85,255,0"   />
 
-	<connector id="Connector_41" sShape="LPT_LOX" sPort="f_out" eShape="Junction_LOX" ePort="f_in2" points="928,88 928,180"  intermediate2="2" elPosition="47" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_41" sShape="LPT_LOX" sPort="f_out" eShape="Junction_LOX" ePort="f_in2" points="938,98 938,190"  intermediate2="2" elPosition="47" lineColor="85,255,0"   />
 
-	<connector id="Connector_42" sShape="Junction_LOX" sPort="f_out" eShape="HighPump_LOX" ePort="f_in" points="976,216"  intermediate1="1" elPosition="48" dx="10" dy="10" lineColor="85,255,0"   />
+	<connector id="Connector_42" sShape="Junction_LOX" sPort="f_out" eShape="HighPump_LOX" ePort="f_in" points="986,226"  intermediate1="1" elPosition="48" lineColor="85,255,0"   />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.
@@ -511,8 +515,6 @@
 -- You can edit the parameters clicking over them.
 
 COMPONENT %NAME% 
-
-
 END COMPONENT
 ]]>
 	</bodyEL>

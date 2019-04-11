@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="SSME_OffDesign" partition="partition11">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<boundaries>
+  <variable name="Inlet_LH2.Tt"/>
+  <variable name="Inlet_LH2.pt"/>
+  <variable name="Inlet_LOX.Tt"/>
+  <variable name="Inlet_LOX.pt"/>
+  <variable name="LPRES.Altitude"/>
+  <variable name="Valve_1.A"/>
+  <variable name="Valve_2.A"/>
+  <variable name="Valve_3.A"/>
+  <variable name="Valve_4.A"/>
+  <variable name="Valve_5.A"/>
+</boundaries>
+<algebraics>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_cp]"/>
+  <variable name="CombCha.M_r"/>
+  <variable name="GasGen_LH2.W_F"/>
+  <variable name="GasGen_LH2.phi"/>
+  <variable name="GasGen_LOX.W_F"/>
+  <variable name="GasGen_LOX.phi"/>
+  <variable name="HighPump_LH2.f_in.pt"/>
+  <variable name="HighPump_LOX.U"/>
+  <variable name="Junction_LH2_1.M_in2"/>
+  <variable name="Junction_LH2_1.M_out"/>
+  <variable name="Junction_LH2_1.f_in1.Tt"/>
+  <variable name="Junction_LH2_2.M_in2"/>
+  <variable name="Junction_LH2_2.M_out"/>
+  <variable name="Junction_LH2_2.f_in1.W"/>
+  <variable name="Junction_LOX.f_in1.W"/>
+  <variable name="Junction_LOX.f_in2.W"/>
+  <variable name="LPT_LOX.U"/>
+  <variable name="LPT_LOX.f_in.Tt"/>
+  <variable name="NozzleExt_1.M_r"/>
+  <variable name="CombCha.p_out_ch"/>
+  <variable name="ThrustMonitor.M_out"/>
+  <variable name="HighPump_LH2.U"/>
+  <variable name="LowPump_LH2.U"/>
+</algebraics>
+</partitionInfo>

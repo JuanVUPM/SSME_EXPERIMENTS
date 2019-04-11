@@ -19,7 +19,7 @@
 		<label cx="23" cy="12" dx="239.029" dy="306" />
 	
 		<instanceData>
-			<datum id="fluid" value="He" pos="D" />
+			<datum id="fluid" value="H2O" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -31,7 +31,7 @@
 		<label cx="23" cy="12" dx="479.029" dy="306" />
 	
 		<instanceData>
-			<datum id="fluid" value="He" pos="D" />
+			<datum id="fluid" value="H2O" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -49,6 +49,10 @@
 		<symbol cx="244" cy="128" sx="81" sy="49" dx="136" dy="272" onLabel="true" />
 	
 		<label cx="35" cy="12" dx="340" dy="422" />
+	
+		<instanceData>
+			<datum id="Type" value="Incompressible_l" pos="P" />
+		</instanceData>
 	
 	</component>
 

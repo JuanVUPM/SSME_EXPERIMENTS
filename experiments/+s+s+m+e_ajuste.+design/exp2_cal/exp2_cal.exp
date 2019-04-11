@@ -1,0 +1,606 @@
+------------------------------------------------------------------------------
+-- Global settings
+------------------------------------------------------------------------------
+INTEGER globalDebugLevel 
+
+
+-------------------------------------------------------------------------------
+-- Get the settings
+-------------------------------------------------------------------------------
+FUNCTION NO_TYPE getPreviousSettings()
+BODY
+	globalDebugLevel = DEBUG_LEVEL
+END FUNCTION
+-------------------------------------------------------------------------------
+-- restore the settings
+-------------------------------------------------------------------------------
+FUNCTION NO_TYPE restorePreviousSettings()
+BODY
+	DEBUG_LEVEL = globalDebugLevel
+END FUNCTION
+------------------------------------------------------------------------------
+-- Case name:    case1
+-- Case description:  Description
+-- Calculation name: extended_steady1
+-- Calculation description:  Extended Steady
+------------------------------------------------------------------------------
+FUNCTION NO_TYPE fcn_case1_calc1(
+	OUT INTEGER n,
+	OUT REAL array_x[],
+	OUT REAL array_fres[],
+	OUT INTEGER iflag)
+	BODY
+		-- set global algebraic variables
+		CombCha.AR = array_x[22]
+
+		-- Point 1: set local conditions
+			-- set boundaries
+		CombCha.f_O.p_c = 1
+		GasGen_LH2.OF = 1
+		GasGen_LH2.f_O.p_c = 1
+		GasGen_LOX.f_O.p_c = 1
+		HPT_LH2.f_in.W = 1
+		HPT_LH2.rpm = 1
+		HPT_LOX.f_in.W = 1
+		HPT_LOX.rpm = 1
+		HighPump_LH2.dp = 1
+		HighPump_LH2.f_in.W = 1
+		HighPump_LH2.phi = 1
+		HighPump_LOX.dp = 1
+		HighPump_LOX.phi = 1
+		HighPump_LOX2.dp = 1
+		HighPump_LOX2.phi = 1
+		Inj_F_GG_LOX.f_in.Tt = 1
+		Inlet_LH2.Tt = 1
+		Inlet_LH2.pt = 1
+		Inlet_LOX.Tt = 1
+		Inlet_LOX.pt = 1
+		Junction_LH2_1.M_in1 = 1
+		Junction_LH2_1.f_in1.W = 1
+		Junction_LH2_2.M_in1 = 1
+		Junction_LOX.f_in2.W = 1
+		Junction_LOX.p_out = 1
+		LPRES.Altitude = 1
+		LPT_LH2.f_in.Tt = 1
+		LPT_LH2.rpm = 1
+		LPT_LOX.phi = 1
+		LPT_LOX.rpm = 1
+		LowPump_LH2.dp = 1
+		LowPump_LH2.phi = 1
+		LowPump_LOX.dp = 1
+		LowPump_LOX.phi = 1
+		SF_LOX_2.f_in.W = 1
+			-- set local algebraic variables
+		LowPump_LH2.U = array_x[1]
+		LowPump_LOX.U = array_x[2]
+		GasGen_LH2.W_F = array_x[3]
+		Junction_LOX.f_in2.fluid[Comb_prod_M] = array_x[4]
+		Junction_LOX.f_in2.fluid[Comb_prod_cp] = array_x[5]
+		Junction_LOX.A_in1 = array_x[6]
+		Junction_LOX.V_in2 = array_x[7]
+		Junction_LH2_1.M_in2 = array_x[8]
+		Junction_LH2_1.M_out = array_x[9]
+		Junction_LH2_2.M_in2 = array_x[10]
+		Junction_LH2_2.M_out = array_x[11]
+		CombCha.p_out_ch = array_x[12]
+		CombCha.M_r = array_x[13]
+		CombCha.A_wet = array_x[14]
+		ThrustMonitor.M_out = array_x[15]
+		HighPump_LH2.U = array_x[16]
+		NozzleExt_1.M_r = array_x[17]
+		NozzleExt_1.A_wet = array_x[18]
+		HighPump_LOX.U = array_x[19]
+		LPT_LOX.U = array_x[20]
+		HighPump_LOX2.U = array_x[21]
+			-- evaluate model
+
+		FRES()
+
+		-- residues 
+		array_fres[1]= getResidueValue(1)
+		array_fres[2]= getResidueValue(2)
+		array_fres[3]= getResidueValue(3)
+		array_fres[4]= getResidueValue(4)
+		array_fres[5]= getResidueValue(5)
+		array_fres[6]= getResidueValue(6)
+		array_fres[7]= getResidueValue(7)
+		array_fres[8]= getResidueValue(8)
+		array_fres[9]= getResidueValue(9)
+		array_fres[10]= getResidueValue(10)
+		array_fres[11]= getResidueValue(11)
+		array_fres[12]= getResidueValue(12)
+		array_fres[13]= getResidueValue(13)
+		array_fres[14]= getResidueValue(14)
+		array_fres[15]= getResidueValue(15)
+		array_fres[16]= getResidueValue(16)
+		array_fres[17]= getResidueValue(17)
+		array_fres[18]= getResidueValue(18)
+		array_fres[19]= getResidueValue(19)
+		array_fres[20]= getResidueValue(20)
+		array_fres[21]= getResidueValue(21)
+		array_fres[22]= evalNormResidue(22,ThrustMonitor.p_out,ThrustMonitor.p_amb,1.0)
+
+		
+END FUNCTION
+
+FUNCTION NO_TYPE fcn_write_global_results_case1_calc1()
+BODY
+	WRITEF("result.rpt","%s \n", versionReport())
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","===========================================================================\n")
+	WRITEF("result.rpt","\tResults summary\n")
+	WRITEF("result.rpt","===========================================================================\n")
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","===========================================================================\n")
+	WRITEF("result.rpt","\tGlobal design variables:\n")
+	WRITEF("result.rpt","===========================================================================\n")
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","CombCha.AR = %s (%s)\n",getValueAsString("CombCha.AR"), unitsOfVariable("CombCha.AR"))
+END FUNCTION
+
+FUNCTION NO_TYPE fcn_write_output_global_results_case1_calc1()
+BODY
+	WRITE("Global results:\n")
+	WRITE("CombCha.AR = %s \n",getValueAsString("CombCha.AR"))
+END FUNCTION
+
+FUNCTION NO_TYPE fcn_recover_algebraic_dynamic_case1_calc1(IN REAL array_x[])
+BODY
+
+	-- Point 1: set local conditions
+		-- set local algebraic variables
+		LowPump_LH2.U = array_x[1]
+		LowPump_LOX.U = array_x[2]
+		GasGen_LH2.W_F = array_x[3]
+		Junction_LOX.f_in2.fluid[Comb_prod_M] = array_x[4]
+		Junction_LOX.f_in2.fluid[Comb_prod_cp] = array_x[5]
+		Junction_LOX.A_in1 = array_x[6]
+		Junction_LOX.V_in2 = array_x[7]
+		Junction_LH2_1.M_in2 = array_x[8]
+		Junction_LH2_1.M_out = array_x[9]
+		Junction_LH2_2.M_in2 = array_x[10]
+		Junction_LH2_2.M_out = array_x[11]
+		CombCha.p_out_ch = array_x[12]
+		CombCha.M_r = array_x[13]
+		CombCha.A_wet = array_x[14]
+		ThrustMonitor.M_out = array_x[15]
+		HighPump_LH2.U = array_x[16]
+		NozzleExt_1.M_r = array_x[17]
+		NozzleExt_1.A_wet = array_x[18]
+		HighPump_LOX.U = array_x[19]
+		LPT_LOX.U = array_x[20]
+		HighPump_LOX2.U = array_x[21]
+END FUNCTION
+
+FUNCTION NO_TYPE fcn_write_case1_calc11(IN REAL array_x[], IN REAL array_fres[])
+BODY
+
+	-- Point 1: local results
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","===========================================================================\n")
+	WRITEF("result.rpt","\tPoint 1\n")
+	WRITEF("result.rpt","===========================================================================\n\n")
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","Boundaries : \n")
+	WRITEF("result.rpt","\n")
+		CombCha.f_O.p_c = 1
+	WRITEF("result.rpt","CombCha.f_O.p_c = %s (%s)\n", getValueAsString("CombCha.f_O.p_c"), unitsOfVariable("CombCha.f_O.p_c"))
+		GasGen_LH2.OF = 1
+	WRITEF("result.rpt","GasGen_LH2.OF = %s (%s)\n", getValueAsString("GasGen_LH2.OF"), unitsOfVariable("GasGen_LH2.OF"))
+		GasGen_LH2.f_O.p_c = 1
+	WRITEF("result.rpt","GasGen_LH2.f_O.p_c = %s (%s)\n", getValueAsString("GasGen_LH2.f_O.p_c"), unitsOfVariable("GasGen_LH2.f_O.p_c"))
+		GasGen_LOX.f_O.p_c = 1
+	WRITEF("result.rpt","GasGen_LOX.f_O.p_c = %s (%s)\n", getValueAsString("GasGen_LOX.f_O.p_c"), unitsOfVariable("GasGen_LOX.f_O.p_c"))
+		HPT_LH2.f_in.W = 1
+	WRITEF("result.rpt","HPT_LH2.f_in.W = %s (%s)\n", getValueAsString("HPT_LH2.f_in.W"), unitsOfVariable("HPT_LH2.f_in.W"))
+		HPT_LH2.rpm = 1
+	WRITEF("result.rpt","HPT_LH2.rpm = %s (%s)\n", getValueAsString("HPT_LH2.rpm"), unitsOfVariable("HPT_LH2.rpm"))
+		HPT_LOX.f_in.W = 1
+	WRITEF("result.rpt","HPT_LOX.f_in.W = %s (%s)\n", getValueAsString("HPT_LOX.f_in.W"), unitsOfVariable("HPT_LOX.f_in.W"))
+		HPT_LOX.rpm = 1
+	WRITEF("result.rpt","HPT_LOX.rpm = %s (%s)\n", getValueAsString("HPT_LOX.rpm"), unitsOfVariable("HPT_LOX.rpm"))
+		HighPump_LH2.dp = 1
+	WRITEF("result.rpt","HighPump_LH2.dp = %s (%s)\n", getValueAsString("HighPump_LH2.dp"), unitsOfVariable("HighPump_LH2.dp"))
+		HighPump_LH2.f_in.W = 1
+	WRITEF("result.rpt","HighPump_LH2.f_in.W = %s (%s)\n", getValueAsString("HighPump_LH2.f_in.W"), unitsOfVariable("HighPump_LH2.f_in.W"))
+		HighPump_LH2.phi = 1
+	WRITEF("result.rpt","HighPump_LH2.phi = %s (%s)\n", getValueAsString("HighPump_LH2.phi"), unitsOfVariable("HighPump_LH2.phi"))
+		HighPump_LOX.dp = 1
+	WRITEF("result.rpt","HighPump_LOX.dp = %s (%s)\n", getValueAsString("HighPump_LOX.dp"), unitsOfVariable("HighPump_LOX.dp"))
+		HighPump_LOX.phi = 1
+	WRITEF("result.rpt","HighPump_LOX.phi = %s (%s)\n", getValueAsString("HighPump_LOX.phi"), unitsOfVariable("HighPump_LOX.phi"))
+		HighPump_LOX2.dp = 1
+	WRITEF("result.rpt","HighPump_LOX2.dp = %s (%s)\n", getValueAsString("HighPump_LOX2.dp"), unitsOfVariable("HighPump_LOX2.dp"))
+		HighPump_LOX2.phi = 1
+	WRITEF("result.rpt","HighPump_LOX2.phi = %s (%s)\n", getValueAsString("HighPump_LOX2.phi"), unitsOfVariable("HighPump_LOX2.phi"))
+		Inj_F_GG_LOX.f_in.Tt = 1
+	WRITEF("result.rpt","Inj_F_GG_LOX.f_in.Tt = %s (%s)\n", getValueAsString("Inj_F_GG_LOX.f_in.Tt"), unitsOfVariable("Inj_F_GG_LOX.f_in.Tt"))
+		Inlet_LH2.Tt = 1
+	WRITEF("result.rpt","Inlet_LH2.Tt = %s (%s)\n", getValueAsString("Inlet_LH2.Tt"), unitsOfVariable("Inlet_LH2.Tt"))
+		Inlet_LH2.pt = 1
+	WRITEF("result.rpt","Inlet_LH2.pt = %s (%s)\n", getValueAsString("Inlet_LH2.pt"), unitsOfVariable("Inlet_LH2.pt"))
+		Inlet_LOX.Tt = 1
+	WRITEF("result.rpt","Inlet_LOX.Tt = %s (%s)\n", getValueAsString("Inlet_LOX.Tt"), unitsOfVariable("Inlet_LOX.Tt"))
+		Inlet_LOX.pt = 1
+	WRITEF("result.rpt","Inlet_LOX.pt = %s (%s)\n", getValueAsString("Inlet_LOX.pt"), unitsOfVariable("Inlet_LOX.pt"))
+		Junction_LH2_1.M_in1 = 1
+	WRITEF("result.rpt","Junction_LH2_1.M_in1 = %s (%s)\n", getValueAsString("Junction_LH2_1.M_in1"), unitsOfVariable("Junction_LH2_1.M_in1"))
+		Junction_LH2_1.f_in1.W = 1
+	WRITEF("result.rpt","Junction_LH2_1.f_in1.W = %s (%s)\n", getValueAsString("Junction_LH2_1.f_in1.W"), unitsOfVariable("Junction_LH2_1.f_in1.W"))
+		Junction_LH2_2.M_in1 = 1
+	WRITEF("result.rpt","Junction_LH2_2.M_in1 = %s (%s)\n", getValueAsString("Junction_LH2_2.M_in1"), unitsOfVariable("Junction_LH2_2.M_in1"))
+		Junction_LOX.f_in2.W = 1
+	WRITEF("result.rpt","Junction_LOX.f_in2.W = %s (%s)\n", getValueAsString("Junction_LOX.f_in2.W"), unitsOfVariable("Junction_LOX.f_in2.W"))
+		Junction_LOX.p_out = 1
+	WRITEF("result.rpt","Junction_LOX.p_out = %s (%s)\n", getValueAsString("Junction_LOX.p_out"), unitsOfVariable("Junction_LOX.p_out"))
+		LPRES.Altitude = 1
+	WRITEF("result.rpt","LPRES.Altitude = %s (%s)\n", getValueAsString("LPRES.Altitude"), unitsOfVariable("LPRES.Altitude"))
+		LPT_LH2.f_in.Tt = 1
+	WRITEF("result.rpt","LPT_LH2.f_in.Tt = %s (%s)\n", getValueAsString("LPT_LH2.f_in.Tt"), unitsOfVariable("LPT_LH2.f_in.Tt"))
+		LPT_LH2.rpm = 1
+	WRITEF("result.rpt","LPT_LH2.rpm = %s (%s)\n", getValueAsString("LPT_LH2.rpm"), unitsOfVariable("LPT_LH2.rpm"))
+		LPT_LOX.phi = 1
+	WRITEF("result.rpt","LPT_LOX.phi = %s (%s)\n", getValueAsString("LPT_LOX.phi"), unitsOfVariable("LPT_LOX.phi"))
+		LPT_LOX.rpm = 1
+	WRITEF("result.rpt","LPT_LOX.rpm = %s (%s)\n", getValueAsString("LPT_LOX.rpm"), unitsOfVariable("LPT_LOX.rpm"))
+		LowPump_LH2.dp = 1
+	WRITEF("result.rpt","LowPump_LH2.dp = %s (%s)\n", getValueAsString("LowPump_LH2.dp"), unitsOfVariable("LowPump_LH2.dp"))
+		LowPump_LH2.phi = 1
+	WRITEF("result.rpt","LowPump_LH2.phi = %s (%s)\n", getValueAsString("LowPump_LH2.phi"), unitsOfVariable("LowPump_LH2.phi"))
+		LowPump_LOX.dp = 1
+	WRITEF("result.rpt","LowPump_LOX.dp = %s (%s)\n", getValueAsString("LowPump_LOX.dp"), unitsOfVariable("LowPump_LOX.dp"))
+		LowPump_LOX.phi = 1
+	WRITEF("result.rpt","LowPump_LOX.phi = %s (%s)\n", getValueAsString("LowPump_LOX.phi"), unitsOfVariable("LowPump_LOX.phi"))
+		SF_LOX_2.f_in.W = 1
+	WRITEF("result.rpt","SF_LOX_2.f_in.W = %s (%s)\n", getValueAsString("SF_LOX_2.f_in.W"), unitsOfVariable("SF_LOX_2.f_in.W"))
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","Local results :\n")
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","LowPump_LH2.U = %g\n", array_x[1])
+	WRITEF("result.rpt","LowPump_LOX.U = %g\n", array_x[2])
+	WRITEF("result.rpt","GasGen_LH2.W_F = %g\n", array_x[3])
+	WRITEF("result.rpt","Junction_LOX.f_in2.fluid[Comb_prod_M] = %g\n", array_x[4])
+	WRITEF("result.rpt","Junction_LOX.f_in2.fluid[Comb_prod_cp] = %g\n", array_x[5])
+	WRITEF("result.rpt","Junction_LOX.A_in1 = %g\n", array_x[6])
+	WRITEF("result.rpt","Junction_LOX.V_in2 = %g\n", array_x[7])
+	WRITEF("result.rpt","Junction_LH2_1.M_in2 = %g\n", array_x[8])
+	WRITEF("result.rpt","Junction_LH2_1.M_out = %g\n", array_x[9])
+	WRITEF("result.rpt","Junction_LH2_2.M_in2 = %g\n", array_x[10])
+	WRITEF("result.rpt","Junction_LH2_2.M_out = %g\n", array_x[11])
+	WRITEF("result.rpt","CombCha.p_out_ch = %g\n", array_x[12])
+	WRITEF("result.rpt","CombCha.M_r = %g\n", array_x[13])
+	WRITEF("result.rpt","CombCha.A_wet = %g\n", array_x[14])
+	WRITEF("result.rpt","ThrustMonitor.M_out = %g\n", array_x[15])
+	WRITEF("result.rpt","HighPump_LH2.U = %g\n", array_x[16])
+	WRITEF("result.rpt","NozzleExt_1.M_r = %g\n", array_x[17])
+	WRITEF("result.rpt","NozzleExt_1.A_wet = %g\n", array_x[18])
+	WRITEF("result.rpt","HighPump_LOX.U = %g\n", array_x[19])
+	WRITEF("result.rpt","LPT_LOX.U = %g\n", array_x[20])
+	WRITEF("result.rpt","HighPump_LOX2.U = %g\n", array_x[21])
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","Closure equations :\n")
+	WRITEF("result.rpt","\n")
+	WRITEF("result.rpt","ThrustMonitor.p_out = ThrustMonitor.p_amb        \tResidue: %g \n",array_fres[22])
+END FUNCTION
+
+FUNCTION NO_TYPE fcn_write_output_case1_calc11(IN REAL array_x[])
+BODY
+	WRITE("\n")
+	WRITE("Point 1: boundaries\n")
+		CombCha.f_O.p_c = 1
+	WRITE("CombCha.f_O.p_c = %s\n", getValueAsString("CombCha.f_O.p_c"))
+		GasGen_LH2.OF = 1
+	WRITE("GasGen_LH2.OF = %s\n", getValueAsString("GasGen_LH2.OF"))
+		GasGen_LH2.f_O.p_c = 1
+	WRITE("GasGen_LH2.f_O.p_c = %s\n", getValueAsString("GasGen_LH2.f_O.p_c"))
+		GasGen_LOX.f_O.p_c = 1
+	WRITE("GasGen_LOX.f_O.p_c = %s\n", getValueAsString("GasGen_LOX.f_O.p_c"))
+		HPT_LH2.f_in.W = 1
+	WRITE("HPT_LH2.f_in.W = %s\n", getValueAsString("HPT_LH2.f_in.W"))
+		HPT_LH2.rpm = 1
+	WRITE("HPT_LH2.rpm = %s\n", getValueAsString("HPT_LH2.rpm"))
+		HPT_LOX.f_in.W = 1
+	WRITE("HPT_LOX.f_in.W = %s\n", getValueAsString("HPT_LOX.f_in.W"))
+		HPT_LOX.rpm = 1
+	WRITE("HPT_LOX.rpm = %s\n", getValueAsString("HPT_LOX.rpm"))
+		HighPump_LH2.dp = 1
+	WRITE("HighPump_LH2.dp = %s\n", getValueAsString("HighPump_LH2.dp"))
+		HighPump_LH2.f_in.W = 1
+	WRITE("HighPump_LH2.f_in.W = %s\n", getValueAsString("HighPump_LH2.f_in.W"))
+		HighPump_LH2.phi = 1
+	WRITE("HighPump_LH2.phi = %s\n", getValueAsString("HighPump_LH2.phi"))
+		HighPump_LOX.dp = 1
+	WRITE("HighPump_LOX.dp = %s\n", getValueAsString("HighPump_LOX.dp"))
+		HighPump_LOX.phi = 1
+	WRITE("HighPump_LOX.phi = %s\n", getValueAsString("HighPump_LOX.phi"))
+		HighPump_LOX2.dp = 1
+	WRITE("HighPump_LOX2.dp = %s\n", getValueAsString("HighPump_LOX2.dp"))
+		HighPump_LOX2.phi = 1
+	WRITE("HighPump_LOX2.phi = %s\n", getValueAsString("HighPump_LOX2.phi"))
+		Inj_F_GG_LOX.f_in.Tt = 1
+	WRITE("Inj_F_GG_LOX.f_in.Tt = %s\n", getValueAsString("Inj_F_GG_LOX.f_in.Tt"))
+		Inlet_LH2.Tt = 1
+	WRITE("Inlet_LH2.Tt = %s\n", getValueAsString("Inlet_LH2.Tt"))
+		Inlet_LH2.pt = 1
+	WRITE("Inlet_LH2.pt = %s\n", getValueAsString("Inlet_LH2.pt"))
+		Inlet_LOX.Tt = 1
+	WRITE("Inlet_LOX.Tt = %s\n", getValueAsString("Inlet_LOX.Tt"))
+		Inlet_LOX.pt = 1
+	WRITE("Inlet_LOX.pt = %s\n", getValueAsString("Inlet_LOX.pt"))
+		Junction_LH2_1.M_in1 = 1
+	WRITE("Junction_LH2_1.M_in1 = %s\n", getValueAsString("Junction_LH2_1.M_in1"))
+		Junction_LH2_1.f_in1.W = 1
+	WRITE("Junction_LH2_1.f_in1.W = %s\n", getValueAsString("Junction_LH2_1.f_in1.W"))
+		Junction_LH2_2.M_in1 = 1
+	WRITE("Junction_LH2_2.M_in1 = %s\n", getValueAsString("Junction_LH2_2.M_in1"))
+		Junction_LOX.f_in2.W = 1
+	WRITE("Junction_LOX.f_in2.W = %s\n", getValueAsString("Junction_LOX.f_in2.W"))
+		Junction_LOX.p_out = 1
+	WRITE("Junction_LOX.p_out = %s\n", getValueAsString("Junction_LOX.p_out"))
+		LPRES.Altitude = 1
+	WRITE("LPRES.Altitude = %s\n", getValueAsString("LPRES.Altitude"))
+		LPT_LH2.f_in.Tt = 1
+	WRITE("LPT_LH2.f_in.Tt = %s\n", getValueAsString("LPT_LH2.f_in.Tt"))
+		LPT_LH2.rpm = 1
+	WRITE("LPT_LH2.rpm = %s\n", getValueAsString("LPT_LH2.rpm"))
+		LPT_LOX.phi = 1
+	WRITE("LPT_LOX.phi = %s\n", getValueAsString("LPT_LOX.phi"))
+		LPT_LOX.rpm = 1
+	WRITE("LPT_LOX.rpm = %s\n", getValueAsString("LPT_LOX.rpm"))
+		LowPump_LH2.dp = 1
+	WRITE("LowPump_LH2.dp = %s\n", getValueAsString("LowPump_LH2.dp"))
+		LowPump_LH2.phi = 1
+	WRITE("LowPump_LH2.phi = %s\n", getValueAsString("LowPump_LH2.phi"))
+		LowPump_LOX.dp = 1
+	WRITE("LowPump_LOX.dp = %s\n", getValueAsString("LowPump_LOX.dp"))
+		LowPump_LOX.phi = 1
+	WRITE("LowPump_LOX.phi = %s\n", getValueAsString("LowPump_LOX.phi"))
+		SF_LOX_2.f_in.W = 1
+	WRITE("SF_LOX_2.f_in.W = %s\n", getValueAsString("SF_LOX_2.f_in.W"))
+	WRITE("\n")
+	WRITE("Point 1: local results\n")
+	WRITE("LowPump_LH2.U = %g\n", array_x[1])
+	WRITE("LowPump_LOX.U = %g\n", array_x[2])
+	WRITE("GasGen_LH2.W_F = %g\n", array_x[3])
+	WRITE("Junction_LOX.f_in2.fluid[Comb_prod_M] = %g\n", array_x[4])
+	WRITE("Junction_LOX.f_in2.fluid[Comb_prod_cp] = %g\n", array_x[5])
+	WRITE("Junction_LOX.A_in1 = %g\n", array_x[6])
+	WRITE("Junction_LOX.V_in2 = %g\n", array_x[7])
+	WRITE("Junction_LH2_1.M_in2 = %g\n", array_x[8])
+	WRITE("Junction_LH2_1.M_out = %g\n", array_x[9])
+	WRITE("Junction_LH2_2.M_in2 = %g\n", array_x[10])
+	WRITE("Junction_LH2_2.M_out = %g\n", array_x[11])
+	WRITE("CombCha.p_out_ch = %g\n", array_x[12])
+	WRITE("CombCha.M_r = %g\n", array_x[13])
+	WRITE("CombCha.A_wet = %g\n", array_x[14])
+	WRITE("ThrustMonitor.M_out = %g\n", array_x[15])
+	WRITE("HighPump_LH2.U = %g\n", array_x[16])
+	WRITE("NozzleExt_1.M_r = %g\n", array_x[17])
+	WRITE("NozzleExt_1.A_wet = %g\n", array_x[18])
+	WRITE("HighPump_LOX.U = %g\n", array_x[19])
+	WRITE("LPT_LOX.U = %g\n", array_x[20])
+	WRITE("HighPump_LOX2.U = %g\n", array_x[21])
+END FUNCTION
+
+FUNCTION BOOLEAN run_case1_calc1()
+DECLS
+	STRING nameOutputFile
+	REAL array_x[22]
+	REAL array_fres[22]
+	INTEGER info
+	BOOLEAN rct = FALSE
+	BOOLEAN rc = FALSE
+	STRING vnames[22] = {
+	"P1-LowPump_LH2.U",
+	"P1-LowPump_LOX.U",
+	"P1-GasGen_LH2.W_F",
+	"P1-Junction_LOX.f_in2.fluid[Comb_prod_M]",
+	"P1-Junction_LOX.f_in2.fluid[Comb_prod_cp]",
+	"P1-Junction_LOX.A_in1",
+	"P1-Junction_LOX.V_in2",
+	"P1-Junction_LH2_1.M_in2",
+	"P1-Junction_LH2_1.M_out",
+	"P1-Junction_LH2_2.M_in2",
+	"P1-Junction_LH2_2.M_out",
+	"P1-CombCha.p_out_ch",
+	"P1-CombCha.M_r",
+	"P1-CombCha.A_wet",
+	"P1-ThrustMonitor.M_out",
+	"P1-HighPump_LH2.U",
+	"P1-NozzleExt_1.M_r",
+	"P1-NozzleExt_1.A_wet",
+	"P1-HighPump_LOX.U",
+	"P1-LPT_LOX.U",
+	"P1-HighPump_LOX2.U",
+	"G-CombCha.AR"
+	}
+	STRING eqts[22] = {
+	"P1ResidueValue(1)",
+	"P1ResidueValue(2)",
+	"P1ResidueValue(3)",
+	"P1ResidueValue(4)",
+	"P1ResidueValue(5)",
+	"P1ResidueValue(6)",
+	"P1ResidueValue(7)",
+	"P1ResidueValue(8)",
+	"P1ResidueValue(9)",
+	"P1ResidueValue(10)",
+	"P1ResidueValue(11)",
+	"P1ResidueValue(12)",
+	"P1ResidueValue(13)",
+	"P1ResidueValue(14)",
+	"P1ResidueValue(15)",
+	"P1ResidueValue(16)",
+	"P1ResidueValue(17)",
+	"P1ResidueValue(18)",
+	"P1ResidueValue(19)",
+	"P1ResidueValue(20)",
+	"P1ResidueValue(21)",
+	"P1-[(ThrustMonitor.p_out) - (ThrustMonitor.p_amb)]"
+ }
+BODY
+	getPreviousSettings()
+	DEBUG_LEVEL = 1
+
+	CALC_BEGIN("extended_steady1(#1)", "extended steady","", TRUE)
+	TIME= 0
+	SMETHOD = NR
+	TOLTYPE = ABSTOL
+	TOLERANCE = 1e-06
+	MAXITER = 10000
+	MAXFEVAL = 40000
+	MAXJACEVAL = 60
+	MAXBROYDEN = 60
+	-- Init global design variables
+	CombCha.AR = 69
+	-- init solver algebraics
+	-- algebraics and dynamics
+	-- point 1
+	LowPump_LH2.U = 500
+	LowPump_LOX.U = 500
+	GasGen_LH2.W_F = 0.5
+	Junction_LOX.f_in2.fluid[Comb_prod_M] = 1
+	Junction_LOX.f_in2.fluid[Comb_prod_cp] = 1
+	Junction_LOX.A_in1 = 0.001
+	Junction_LOX.V_in2 = 1
+	Junction_LH2_1.M_in2 = 0.3
+	Junction_LH2_1.M_out = 0.3
+	Junction_LH2_2.M_in2 = 0.3
+	Junction_LH2_2.M_out = 0.3
+	CombCha.p_out_ch = 100
+	CombCha.M_r = 1
+	CombCha.A_wet = 1
+	ThrustMonitor.M_out = 100
+	HighPump_LH2.U = 500
+	NozzleExt_1.M_r = 1
+	NozzleExt_1.A_wet = 1
+	HighPump_LOX.U = 500
+	LPT_LOX.U = 1
+	HighPump_LOX2.U = 500
+	array_x[1] = LowPump_LH2.U
+	array_x[2] = LowPump_LOX.U
+	array_x[3] = GasGen_LH2.W_F
+	array_x[4] = Junction_LOX.f_in2.fluid[Comb_prod_M]
+	array_x[5] = Junction_LOX.f_in2.fluid[Comb_prod_cp]
+	array_x[6] = Junction_LOX.A_in1
+	array_x[7] = Junction_LOX.V_in2
+	array_x[8] = Junction_LH2_1.M_in2
+	array_x[9] = Junction_LH2_1.M_out
+	array_x[10] = Junction_LH2_2.M_in2
+	array_x[11] = Junction_LH2_2.M_out
+	array_x[12] = CombCha.p_out_ch
+	array_x[13] = CombCha.M_r
+	array_x[14] = CombCha.A_wet
+	array_x[15] = ThrustMonitor.M_out
+	array_x[16] = HighPump_LH2.U
+	array_x[17] = NozzleExt_1.M_r
+	array_x[18] = NozzleExt_1.A_wet
+	array_x[19] = HighPump_LOX.U
+	array_x[20] = LPT_LOX.U
+	array_x[21] = HighPump_LOX2.U
+	-- global design variables
+	array_x[22] = CombCha.AR
+	-- solver algebraic parameters
+		-- point 1 local
+	setAlgVariableInfo("P1-LowPump_LH2.U",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-LowPump_LOX.U",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-GasGen_LH2.W_F",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-Junction_LOX.f_in2.fluid[Comb_prod_M]",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-Junction_LOX.f_in2.fluid[Comb_prod_cp]",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-Junction_LOX.A_in1",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-Junction_LOX.V_in2",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-Junction_LH2_1.M_in2",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-Junction_LH2_1.M_out",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-Junction_LH2_2.M_in2",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-Junction_LH2_2.M_out",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-CombCha.p_out_ch",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-CombCha.M_r",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-CombCha.A_wet",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-ThrustMonitor.M_out",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-HighPump_LH2.U",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-NozzleExt_1.M_r",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-NozzleExt_1.A_wet",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-HighPump_LOX.U",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-LPT_LOX.U",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+	setAlgVariableInfo("P1-HighPump_LOX2.U",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+		-- global 2
+	setAlgVariableInfo("G-CombCha.AR",1.5e-08,1.5e-08,1.79769313e+308,1.79769313e+308)
+
+	-- solver residues parameters
+	setResidueInfo(1,1e-06,ABSTOL)
+	setResidueInfo(2,1e-06,ABSTOL)
+	setResidueInfo(3,1e-06,ABSTOL)
+	setResidueInfo(4,1e-06,ABSTOL)
+	setResidueInfo(5,1e-06,ABSTOL)
+	setResidueInfo(6,1e-06,ABSTOL)
+	setResidueInfo(7,1e-06,ABSTOL)
+	setResidueInfo(8,1e-06,ABSTOL)
+	setResidueInfo(9,1e-06,ABSTOL)
+	setResidueInfo(10,1e-06,ABSTOL)
+	setResidueInfo(11,1e-06,ABSTOL)
+	setResidueInfo(12,1e-06,ABSTOL)
+	setResidueInfo(13,1e-06,ABSTOL)
+	setResidueInfo(14,1e-06,ABSTOL)
+	setResidueInfo(15,1e-06,ABSTOL)
+	setResidueInfo(16,1e-06,ABSTOL)
+	setResidueInfo(17,1e-06,ABSTOL)
+	setResidueInfo(18,1e-06,ABSTOL)
+	setResidueInfo(19,1e-06,ABSTOL)
+	setResidueInfo(20,1e-06,ABSTOL)
+	setResidueInfo(21,1e-06,ABSTOL)
+	setResidueInfo(22,1e-06,ABSTOL)
+	EXEC_INIT()
+	RESET_EVENTS()
+	-- init derivatives to zero
+	setDerivativesToZero()
+
+	-- Modified Powell hybrid method
+	rc = nldsolver(fcn_case1_calc1,22,array_x, array_fres, info, eqts, vnames)
+
+	IF ( rc == TRUE ) THEN
+		WRITE("====================\n")
+		WRITE("Extended steady (OK)\n")
+		WRITE("====================\n")
+	ELSE
+		WRITE("=====================\n")
+		WRITE("Extended steady (NOK)\n")
+		WRITE("=====================\n")
+	END IF
+	-- write global results in file 
+	fcn_write_global_results_case1_calc1()
+	fcn_write_case1_calc11(array_x, array_fres)
+	-- display results in output windows 
+	fcn_write_output_global_results_case1_calc1()
+	fcn_write_output_case1_calc11(array_x)
+	fcn_recover_algebraic_dynamic_case1_calc1(array_x)
+	CLOSEF("result.rpt")
+	IF(rc == TRUE) THEN 
+		rct = TRUE
+	END IF
+	CALC_END(TRUE)
+	restorePreviousSettings()
+	RETURN rct
+END FUNCTION
+
+------------------------------------------------------------------------------
+-- Case name:   case1
+-- Case description: Description
+------------------------------------------------------------------------------
+FUNCTION BOOLEAN run_case1()
+DECLS
+	BOOLEAN rc = TRUE
+BODY
+	NEW_BRANCH("case1_extended_steady1")
+	rc = run_case1_calc1()
+	RETURN rc
+END FUNCTION
+
+EXPERIMENT exp2_cal ON SSME_ajuste.Design
+DECLS
+	BOOLEAN rc = TRUE
+BODY
+	CASE_BEGIN("case1(#1)", TRUE)
+		RESET_VARIABLES()
+		run_case1()
+	CASE_END(TRUE)
+END EXPERIMENT

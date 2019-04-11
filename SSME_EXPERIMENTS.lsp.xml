@@ -13,6 +13,10 @@
   <file name="Cooling_Test.eds"/>
   <file name="Cooling_Testx2.eds"/>
   <file name="SSME_ajuste.eds"/>
+  <file name="SSME_design.eds"/>
+  <file name="a.eds"/>
+  <file name="SSME_OffDesign.eds"/>
+  <file name="SSME_OffDesign_NV.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>

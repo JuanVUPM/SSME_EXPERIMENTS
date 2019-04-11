@@ -1,0 +1,96 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: SSME_design
+ PARTITION: Design
+ EXPERIMENT: exp2
+ TEMPLATE: TRANSIENT
+ CREATION DATE: 04/04/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp2 ON SSME_design.Design
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Junction_LOX.V_in2 = 0
+      Junction_LOX.f_in2.W = 1
+      Junction_LOX.p_in1 = 0
+      GasGen_LH2.W_F = 0.5
+      GasGen_LOX.W_F = 0.5
+      Junction_LH2_1.M_out = 0.3
+      Junction_LH2_2.M_in2 = 0.3
+      Junction_LH2_2.M_out = 0.3
+      CombCha.p_out_ch = 100
+      CombCha.A_wet = 1
+      ThrustMonitor.M_out = 100
+      NozzleExt_1.M_r = 0
+      NozzleExt_1.A_wet = 1
+      HighPump_LH2.U = 500
+      HighPump_LOX.U = 500
+      HighPump_LOX2.U = 500
+      LowPump_LH2.U = 500
+      LowPump_LOX.U = 500
+      LPT_LOX.U = 0
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      GasGen_LH2.OF = 0
+      GasGen_LOX.OF = 0
+      HPT_LH2.rpm = 0
+      HPT_LOX.rpm = 0
+      HighPump_LH2.dp = 0
+      HighPump_LH2.f_in.W = 1
+      HighPump_LH2.phi = 0
+      HighPump_LOX.dp = 0
+      HighPump_LOX.phi = 0
+      HighPump_LOX2.dp = 0
+      HighPump_LOX2.phi = 0
+      Inj_F_GG_LOX.f_in.Tt = 1
+      Inj_O_CC.v_ideal = 0
+      Inj_O_GG_LH2.v_ideal = 0
+      Inj_O_GG_LOX.v_ideal = 0
+      Inlet_LH2.Tt = 0
+      Inlet_LH2.pt = 0
+      Inlet_LOX.Tt = 0
+      Inlet_LOX.pt = 0
+      Junction_LH2_1.M_in1 = 0
+      Junction_LH2_2.M_in1 = 0
+      Junction_LOX.V_in1 = 0
+      Junction_LOX.f_in1.W = 1
+      LPRES.Altitude = 0
+      LPT_LH2.f_in.Tt = 1
+      LPT_LH2.rpm = 0
+      LPT_LOX.phi = 0
+      LPT_LOX.rpm = 0
+      LowPump_LH2.dp = 0
+      LowPump_LH2.phi = 0
+      LowPump_LOX.dp = 0
+      LowPump_LOX.phi = 0
+
+   BODY
+      -- creates an ASCII file with the results in table format
+      -- REPORT_TABLE("results.rpt", "*",TRUE)
+
+      -- set the debug level (valid range [0,4])
+      DEBUG_LEVEL= 1   
+      -- select default integration solver. Valid methods are IDAS (_SPARSE), DASSL(_SPARSE), CVODE_BDF(_SPARSE), CVODE_AM, RK4, EULER, AM1, AM2 and AM4
+      IMETHOD= IDAS -- default is DASSL, recommended is either IDAS or IDAS_SPARSE  
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL
+      eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      eSetConfig(CFG_FORCE_STOP_CINT,TRUE) -- Force or not to stop the solver each CINT. Sometimes you can speed up the simulation if you select FALSE
+      -- set tolerances and other important inputs
+      REL_ERROR = 1e-06 -- transient solver relative tolerance
+      ABS_ERROR = 1e-06 -- transient solver absolute tolerance
+      TOLERANCE = 1e-06 -- steady solver relative tolerance
+      INIT_INTEG_STEP = -1 -- initial integration step size (-1 means use the solver estimation) 
+      MAX_INTEG_STEP = -1 -- maximum integration step size (-1 means use the solver estimation) 
+      NSTEPS = 1 -- Only for explicit solvers use CINT/NSTEPS as integration step size
+      REPORT_MODE = IS_EVENT -- by default it reports results at every CINT and event detection. Other valid options are IS_STEP, IS_CINT and IS_MANUAL_REFRESH 
+
+      -- simulate a transient in range[TIME,TSTOP] reporting every CINT
+      TIME = 0
+      TSTOP = 15
+      CINT = 0.1
+      INTEG()
+END EXPERIMENT

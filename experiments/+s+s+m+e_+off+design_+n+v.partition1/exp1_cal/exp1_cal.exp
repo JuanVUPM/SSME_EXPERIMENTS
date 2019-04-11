@@ -1,0 +1,166 @@
+------------------------------------------------------------------------------
+-- Global settings
+------------------------------------------------------------------------------
+INTEGER globalDebugLevel 
+
+
+-------------------------------------------------------------------------------
+-- Get the settings
+-------------------------------------------------------------------------------
+FUNCTION NO_TYPE getPreviousSettings()
+BODY
+	globalDebugLevel = DEBUG_LEVEL
+END FUNCTION
+-------------------------------------------------------------------------------
+-- restore the settings
+-------------------------------------------------------------------------------
+FUNCTION NO_TYPE restorePreviousSettings()
+BODY
+	DEBUG_LEVEL = globalDebugLevel
+END FUNCTION
+------------------------------------------------------------------------------
+-- Case name:    case1
+-- Case description:  Description
+-- Calculation name: steady1
+-- Calculation description:  Steady
+------------------------------------------------------------------------------
+FUNCTION BOOLEAN run_case1_calc1()
+DECLS
+	BOOLEAN rct = TRUE
+	ENUM t_statusIntegration rc = STEADY_NOK
+BODY
+	getPreviousSettings()
+	DEBUG_LEVEL = 3
+
+	CALC_BEGIN("steady1(#1)", "steady", "", TRUE)
+	TOLTYPE= ABSTOL
+	TOLERANCE= 1e-06
+	SMETHOD= NR
+	MAXITER= 10000
+	MAXFEVAL= 40000
+	MAXJACEVAL= 60
+	MAXBROYDEN= 60
+	-- Init algebraic variables
+	Junction_LOX.f_in2.fluid[Comb_prod_M] = 1 -- initialized in component
+	Junction_LOX.f_in2.fluid[Comb_prod_cp] = 1 -- initialized in component
+	CombCha.M_r = 2.8012363276683829 -- initialized in component
+	CombCha.W_F = 65.138749999999987
+	CombCha.phi = 1.3628779161000102
+	FlowMeter_1.f_in.fluid[Comb_prod] = 0.41626713863249404 -- initialized in component
+	GasGen_LH2.W_F = 36.147222224732445
+	GasGen_LH2.W_IO = 0
+	GasGen_LH2.phi = 9.1940298521185131
+	GasGen_LOX.W_F = 21.002777775267546
+	GasGen_LOX.phi = 17.080250741891735
+	HighPump_LH2.f_in.pt = 2054637.68
+	HighPump_LOX.U = 213.3318292407765
+	Junction_LH2_1.M_in2 = 0.22192820967334689
+	Junction_LH2_1.M_out = 0.19350694159675247
+	Junction_LH2_1.f_in2.pt = 20347995.171945199
+	Junction_LH2_2.M_in2 = 0.20375750244542834
+	Junction_LH2_2.M_out = 0.1151748582554388
+	Junction_LOX.f_in2.W = 84.36
+	LPT_LOX.U = 148.50194633213246
+	LPT_LOX.f_in.Tt = 99.300323071108224
+	NozzleExt_1.M_r = 2.8012363405656289
+	LowPump_LH2.U = 256.41013107257641
+	CombCha.p_out_ch = 19934.177790026079
+	ThrustMonitor.M_out = 4.6879299165147081
+	HighPump_LH2.U = 995.58075006648016
+	-- init boundaries
+	Inlet_LH2.Tt = 20
+	Inlet_LH2.pt = 206842
+	Inlet_LOX.Tt = 90
+	Inlet_LOX.pt = 689476
+	LPRES.Altitude = 100000
+	EXEC_INIT()
+	RESET_EVENTS()
+		-- global settings for algebraics
+	setAlgVariableInfo("Junction_LOX.f_in2.fluid[Comb_prod_M]",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("Junction_LOX.f_in2.fluid[Comb_prod_cp]",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("CombCha.M_r",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("CombCha.W_F",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("CombCha.phi",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("FlowMeter_1.f_in.fluid[Comb_prod]",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("GasGen_LH2.W_F",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("GasGen_LH2.W_IO",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("GasGen_LH2.phi",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("GasGen_LOX.W_F",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("GasGen_LOX.phi",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("HighPump_LH2.f_in.pt",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("HighPump_LOX.U",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("Junction_LH2_1.M_in2",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("Junction_LH2_1.M_out",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("Junction_LH2_1.f_in2.pt",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("Junction_LH2_2.M_in2",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("Junction_LH2_2.M_out",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("Junction_LOX.f_in2.W",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("LPT_LOX.U",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("LPT_LOX.f_in.Tt",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("NozzleExt_1.M_r",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("LowPump_LH2.U",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("CombCha.p_out_ch",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("ThrustMonitor.M_out",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+	setAlgVariableInfo("HighPump_LH2.U",1.5e-08,1.5e-08,1.5e-08,1.5e-08)
+
+	-- closure equations tolerances
+	setResidueInfo(1,1e-06,ABSTOL)
+	setResidueInfo(2,1e-06,ABSTOL)
+	setResidueInfo(3,1e-06,ABSTOL)
+	setResidueInfo(4,1e-06,ABSTOL)
+	setResidueInfo(5,1e-06,ABSTOL)
+	setResidueInfo(6,1e-06,ABSTOL)
+	setResidueInfo(7,1e-06,ABSTOL)
+	setResidueInfo(8,1e-06,ABSTOL)
+	setResidueInfo(9,1e-06,ABSTOL)
+	setResidueInfo(10,1e-06,ABSTOL)
+	setResidueInfo(11,1e-06,ABSTOL)
+	setResidueInfo(12,1e-06,ABSTOL)
+	setResidueInfo(13,1e-06,ABSTOL)
+	setResidueInfo(14,1e-06,ABSTOL)
+	setResidueInfo(15,1e-06,ABSTOL)
+	setResidueInfo(16,1e-06,ABSTOL)
+	setResidueInfo(17,1e-06,ABSTOL)
+	setResidueInfo(18,1e-06,ABSTOL)
+	setResidueInfo(19,1e-06,ABSTOL)
+	setResidueInfo(20,1e-06,ABSTOL)
+	setResidueInfo(21,1e-06,ABSTOL)
+	setResidueInfo(22,1e-06,ABSTOL)
+	setResidueInfo(23,1e-06,ABSTOL)
+	setResidueInfo(24,1e-06,ABSTOL)
+	setResidueInfo(25,1e-06,ABSTOL)
+	setResidueInfo(26,1e-06,ABSTOL)
+
+	rc = STEADY()
+	SAVE_VARS("report.rpt","*", T_XML)
+	CALC_END(TRUE)
+	restorePreviousSettings()
+	IF(rc == STEADY_NOK) THEN
+		rct = FALSE
+	END IF
+	RETURN rct
+
+END FUNCTION
+
+------------------------------------------------------------------------------
+-- Case name:   case1
+-- Case description: Description
+------------------------------------------------------------------------------
+FUNCTION BOOLEAN run_case1()
+DECLS
+	BOOLEAN rc = TRUE
+BODY
+	NEW_BRANCH("case1_steady1")
+	rc = run_case1_calc1()
+	RETURN rc
+END FUNCTION
+
+EXPERIMENT exp1_cal ON SSME_OffDesign_NV.partition1
+DECLS
+	BOOLEAN rc = TRUE
+BODY
+	CASE_BEGIN("case1(#1)", TRUE)
+		RESET_VARIABLES()
+		run_case1()
+	CASE_END(TRUE)
+END EXPERIMENT

@@ -2,8 +2,6 @@
 <experiment version="1.4.0">
 	<experimentViews>
 		<tab name="Tab_1">
-				</tab>
-		<tab name="Tab_2">
 			<tableWindow title="" x="0" y="0" dx="350" dy="250" state="maximized">
 				<table id="Table_1" colums="false">
 					<var name="#Calculation id"/>
@@ -11,28 +9,87 @@
 					<var name="#ESI"/>
 					<var name="#Case"/>
 					<var name="#Point"/>
-					<var name="HPT_LH2.A_in"/>
-					<var name="HPT_LH2.MF_param"/>
-					<var name="HPT_LH2.Power"/>
-					<var name="HPT_LH2.W"/>
-					<var name="HPT_LH2.alpha"/>
-					<var name="HPT_LH2.eta"/>
-					<var name="HPT_LH2.eta_d"/>
-					<var name="HPT_LH2.f_in.Tt"/>
-					<var name="HPT_LH2.f_in.W"/>
+					<var name="Inj_F_CC.A"/>
+					<var name="Inj_F_GG_LH2.A"/>
+					<var name="Inj_F_GG_LOX.A"/>
+					<var name="Inj_O_CC.A"/>
+					<var name="Inj_O_GG_LH2.A"/>
+					<var name="Inj_O_GG_LOX.A"/>
+				</table>
+			</tableWindow>
+		</tab>
+		<tab name="Tab_2">
+			<tableWindow title="Table_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
 					<var name="HPT_LH2.f_in.pt"/>
-					<var name="HPT_LH2.f_out.Tt"/>
-					<var name="HPT_LH2.f_out.W"/>
 					<var name="HPT_LH2.f_out.pt"/>
-					<var name="HPT_LH2.m.N"/>
-					<var name="HPT_LH2.m.Power"/>
-					<var name="HPT_LH2.pi"/>
-					<var name="HPT_LH2.rpm"/>
+					<var name="LPT_LH2.f_in.pt"/>
+					<var name="LPT_LH2.f_out.pt"/>
+				</table>
+			</tableWindow>
+		</tab>
+		<tab name="Tab_3">
+			<tableWindow title="Table_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="Junction_LH2_1.f_in1.pt"/>
+					<var name="Junction_LH2_1.f_in2.pt"/>
+					<var name="Junction_LH2_1.f_out.pt"/>
+					<var name="CombCha.p_c"/>
+					<var name="Junction_LH2_2.f_out.pt"/>
+					<var name="Junction_LH2_1.p_in1"/>
+				</table>
+			</tableWindow>
+		</tab>
+		<tab name="Tab_4">
+			<tableWindow title="Table_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="Junction_LH2_2.f_in1.pt"/>
+					<var name="Junction_LH2_2.f_in2.pt"/>
+					<var name="Junction_LH2_2.p_in1"/>
+					<var name="HPT_LOX.f_in.pt"/>
+					<var name="HPT_LOX.f_out.pt"/>
+					<var name="Inj_O_CC.v_ideal"/>
+					<var name="Inj_O_GG_LH2.v_ideal"/>
+					<var name="Inj_O_GG_LOX.v_ideal"/>
+					<var name="Junction_LOX.V_in1"/>
+				</table>
+			</tableWindow>
+		</tab>
+		<tab name="Tab_5">
+			<tableWindow title="Table_1" x="0" y="0" dx="350" dy="250" state="maximized">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="Junction_LOX.f_in2.Tt"/>
+					<var name="Junction_LOX.f_in2.pt"/>
+					<var name="LPT_LOX.eta_d"/>
+					<var name="LPT_LOX.f_in.Tt"/>
+					<var name="LPT_LOX.f_in.pt"/>
+					<var name="Cepe"/>
+					<var name="Ro"/>
 				</table>
 			</tableWindow>
 		</tab>
 	</experimentViews>
-	<watch width="268" height="192" visible="true" pos="right" >
+	<watch width="100" height="192" visible="false" pos="right" >
 		<currentTab name="view"/>
 		<variables>
 			<tab name="initial"> 
@@ -68,5 +125,5 @@
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
-	<mainWindow  mode="maximized" currentTab="Tab_1" />
+	<mainWindow  mode="maximized" currentTab="Tab_5" />
 </experiment>

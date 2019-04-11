@@ -27,7 +27,7 @@
 		<label cx="47.5" cy="12" dx="-11.4995" dy="176" />
 	
 		<instanceData>
-			<datum id="eta_d" value="0.6" pos="D" />
+			<datum id="eta_d" value="0.55" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -189,7 +189,7 @@
 		<label cx="49" cy="12" dx="114" dy="629.036" />
 	
 		<instanceData>
-			<datum id="eta_d" value="0.6" pos="D" />
+			<datum id="eta_d" value="0.77" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -204,7 +204,7 @@
 	
 		<instanceData>
 			<datum id="Type" value="Known_dp" pos="P" />
-			<datum id="dp" value="18e6" pos="D" />
+			<datum id="dp" value="12.e6" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -262,7 +262,7 @@
 		<label cx="30.5" cy="12" dx="247.5" dy="122" />
 	
 		<instanceData>
-			<datum id="eta_d" value="1" pos="D" />
+			<datum id="eta_d" value=".62" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -343,7 +343,7 @@
 		<label cx="31.5" cy="12" dx="262.5" dy="354" />
 	
 		<instanceData>
-			<datum id="eta_d" value="1" pos="D" />
+			<datum id="eta_d" value="0.8" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -377,7 +377,7 @@
 		<label cx="49.5" cy="12" dx="873.5" dy="469.036" />
 	
 		<instanceData>
-			<datum id="eta_d" value="0.6" pos="D" />
+			<datum id="eta_d" value="0.65" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -415,6 +415,10 @@
 		<symbol cx="250" cy="153.75" sx="109" sy="92.5" dx="608" dy="-24" onLabel="true" />
 	
 		<label cx="31" cy="12" dx="821" dy="173.5" />
+	
+		<instanceData>
+			<datum id="eta_d" value="0.75" pos="D" />
+		</instanceData>
 	
 	</component>
 
@@ -460,7 +464,7 @@
 		<label cx="53" cy="12" dx="680.482" dy="423.518" />
 	
 		<instanceData>
-			<datum id="eta_d" value="0.6" pos="D" />
+			<datum id="eta_d" value="0.65" pos="D" />
 		</instanceData>
 	
 	</component>

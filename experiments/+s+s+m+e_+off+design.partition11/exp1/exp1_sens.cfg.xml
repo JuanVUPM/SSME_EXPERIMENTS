@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.3.0">
+	<watch width="268" height="192" visible="true" pos="right">
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial">
+			</tab>
+			<tab name="inputs">
+			</tab>
+			<tab name="view">
+				<var name="SSME_EXPERIMENTS.initialRes[01]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[02]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[03]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[04]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[05]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[06]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[07]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[08]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[09]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[10]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[11]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[12]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[13]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[14]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[15]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[16]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[17]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[18]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[19]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[20]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[21]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[22]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[23]"/>
+				<var name="SSME_EXPERIMENTS.initialRes[24]"/>
+			</tab>
+		</variables>
+		<layout>
+			<tab name="initial">
+				<column name="name" width="100"/>
+				<column name="value" width="100"/>
+				<column name="units" width="100"/>
+				<column name="category" width="100"/>
+				<column name="type" width="100"/>
+			</tab>
+			<tab name="inputs">
+				<column name="name" width="100"/>
+				<column name="value" width="100"/>
+				<column name="units" width="100"/>
+				<column name="category" width="100"/>
+				<column name="type" width="100"/>
+			</tab>
+			<tab name="view">
+				<column name="name" width="100"/>
+				<column name="value" width="100"/>
+				<column name="units" width="100"/>
+				<column name="category" width="100"/>
+			</tab>
+		</layout>
+	</watch>
+	<outputWindow height="192" width="1280" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+	<mainWindow  mode="maximized" currentTab="Res 1" />
+</experiment>

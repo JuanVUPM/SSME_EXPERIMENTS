@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment id="exp1" version="1.3.0" component="SSME_OffDesign" partition="OffDesign">
+  <header/>
+  <options>
+    <maximumTimeCalculation id="maxTimeCalculation" maxTime="" active="no"/>
+  </options>
+  <case id="case2" noplotted="no" description="Description" run="yes" type="standard case">
+    <steady id="steady1" description="Steady">
+      <general>
+        <caltype/>
+        <nlsolver maxfval="40000" toltype="RELTOL" smethod="NR" maxbroyden="60" tolerance="1e-06" maxjaceval="60" rdigits="9" maxiter="10000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="3"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="Inlet_LH2.Tt" alias="" value="20"/>
+          <variable id="Inlet_LH2.pt" alias="" value="206842"/>
+          <variable id="Inlet_LOX.Tt" alias="" value="90"/>
+          <variable id="Inlet_LOX.pt" alias="" value="689476"/>
+          <variable id="LPRES.Altitude" alias="" value="100000"/>
+          <variable id="Valve_1.A" alias="" value="100"/>
+          <variable id="Valve_2.A" alias="" value="100"/>
+          <variable id="Valve_3.A" alias="" value="100"/>
+          <variable id="Valve_4.A" alias="" value="100"/>
+          <variable id="Valve_5.A" alias="" value="100"/>
+        </bounds>
+        <initial>
+          <variable id="Junction_LOX.f_in2.fluid[Comb_prod_M]" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="Junction_LOX.f_in2.fluid[Comb_prod_cp]" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="CombCha.M_r" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="2.8012363276683829" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="CombCha.W_F" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="65.138749999999987" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="FlowMeter_1.f_in.fluid[Comb_prod]" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="0.41626713863249404" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="GasGen_LH2.W_F" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="36.147222224732445" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="GasGen_LOX.W_F" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="21.002777775267546" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="HighPump_LH2.f_in.pt" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="2054637.68" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="HighPump_LOX.U" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="213.3318292407765" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="HighPump_LOX.f_in.W" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="508.01" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="HighPump_LOX2.f_in.W" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="41.29" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="Junction_LH2_1.M_in2" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="0.22192820967334689" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="Junction_LH2_1.M_out" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="0.19350694159675247" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="Junction_LH2_1.f_in2.pt" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="20347995.171945199" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="Junction_LH2_2.M_in2" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="0.20375750244542834" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="Junction_LH2_2.M_out" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="0.1151748582554388" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="Junction_LH2_2.f_in1.W" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="80.75" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="Junction_LOX.f_in1.W" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="423.65" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="LPT_LOX.U" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="148.50194633213246" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="LPT_LOX.f_in.Tt" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="99.300323071108224" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="NozzleExt_1.M_r" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="2.8012363405656289" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="CombCha.p_out_ch" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="19934.177790026079" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor.M_out" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="4.6879299165147081" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="HighPump_LH2.U" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="995.58075006648016" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+          <variable id="LowPump_LH2.U" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="256.41013107257641" maxStepRel="1.5e-08" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="Junction_LOX.f_in2.fluid[Comb_prod_M]" right="MATH.max(Junction_LOX.f_in1.fluid[Comb_prod_M], Junction_LOX.f_in2.fluid[Comb_prod_M])" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Junction_LOX.f_in2.fluid[Comb_prod_cp]" right="MATH.max(Junction_LOX.f_in1.fluid[Comb_prod_cp], Junction_LOX.f_in2.fluid[Comb_prod_cp])" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="HPT_LOX.f_in.fluid[Comb_prod]" right="(GasGen_LOX.fluid_P_vap[Comb_prod] * (GasGen_LOX.W_O + GasGen_LOX.W_F) + GasGen_LOX.W_IO + GasGen_LOX.W_IF) / HPT_LOX.f_in.W" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="CombCha.AR_r" right="1 / CombCha.M_r * LPRES.FGAMMA(NozzleExt_1.g_in.fluid) / sqrt(LPRES.gamma(NozzleExt_1.g_in.fluid)) * (1 + (LPRES.gamma(NozzleExt_1.g_in.fluid) - 1) * CombCha.M_r ** 2 / 2) ** ((LPRES.gamma(NozzleExt_1.g_in.fluid) + 1) / (2 * (LPRES.gamma(NozzleExt_1.g_in.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="NozzleExt_1.AR_r" right="1 / NozzleExt_1.M_r * LPRES.FGAMMA(NozzleExt_1.g_in.fluid) / sqrt(LPRES.gamma(NozzleExt_1.g_in.fluid)) * (1 + (LPRES.gamma(NozzleExt_1.g_in.fluid) - 1) * NozzleExt_1.M_r ** 2 / 2) ** ((LPRES.gamma(NozzleExt_1.g_in.fluid) + 1) / (2 * (LPRES.gamma(NozzleExt_1.g_in.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="HighPump_LOX.f_in.W * Junction_LOX.V_out + Junction_LOX.p_out * Junction_LOX.A_out" right="Junction_LOX.f_in1.W * Junction_LOX.V_in1 + Junction_LOX.p_in1 * Junction_LOX.A_in1 + Junction_LOX.f_in2.W * Junction_LOX.V_in2 + Junction_LOX.p_in1 * Junction_LOX.A_in2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="(LPT_LOX.f_in.pt - Junction_LOX.f_in2.pt) / LPRES.rho(Junction_LOX.f_in2.fluid) * (1 - LPT_LOX.eta_d)" right="LPRES.cp(Junction_LOX.f_in2.fluid) * (Junction_LOX.f_in2.Tt - LPT_LOX.f_in.Tt)" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="CoolingJacket_NE.h.Q" right="NozzleExt_1.h_g * (NozzleExt_1.T_aw - CoolingJacket_NE.h.T) * NozzleExt_1.A_wet" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="(GasGen_LH2.W_O + GasGen_LH2.W_F) * GasGen_LH2.fluid_P_decomp[CombProd] / HPT_LH2.f_in.W * GasGen_LH2.fluid_P_decomp[CombProd_cp] * (HPT_LH2.f_in.Tt - GasGen_LH2.T_c) + GasGen_LH2.W_IO / HPT_LH2.f_in.W * Junction_LOX.f_in2.fluid[Comb_prod_cp] * (HPT_LH2.f_in.Tt - SF_LOX_3.f_in.Tt) + GasGen_LH2.W_IF / HPT_LH2.f_in.W * GasGen_LOX.f_F.fluid[Comb_prod_cp] * (HPT_LH2.f_in.Tt - GasGen_LH2.f_F.T)" right="0" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="CoolingJacket_CC.h.Q" right="CoolingJacket_CC.h_l * (CoolingJacket_CC.T_w_cold - CoolingJacket_CC.l.Tt) * CoolingJacket_CC.A_wet_cooling" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Junction_LH2_1.f_in1.W * sqrt(LPRES.R(Junction_LH2_1.f_in1.fluid) * Junction_LH2_1.f_in1.Tt) / Junction_LH2_1.A_in1 / Junction_LH2_1.f_in1.pt" right="sqrt(LPRES.gamma(Junction_LH2_1.f_in1.fluid)) * Junction_LH2_1.M_in1 * (1 + (LPRES.gamma(Junction_LH2_1.f_in1.fluid) - 1) / 2 * Junction_LH2_1.M_in1 ** 2) ** (-(LPRES.gamma(Junction_LH2_1.f_in1.fluid) + 1) / 2 / (LPRES.gamma(Junction_LH2_1.f_in1.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Junction_LH2_1.f_in1.pt / Junction_LH2_1.p_in1" right="(1 + (LPRES.gamma(Junction_LH2_1.f_in1.fluid) - 1) / 2 * Junction_LH2_1.M_in1 ** 2) ** (LPRES.gamma(Junction_LH2_1.f_in1.fluid) / (LPRES.gamma(Junction_LH2_1.f_in1.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="LPRES.FGAMMA(HPT_LH2.f_in.fluid)" right="HPT_LH2.f_in.W * sqrt(HPT_LH2.f_in.Tt * LPRES.R(HPT_LH2.f_in.fluid)) / (HPT_LH2.f_in.pt * HPT_LH2.A_in)" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="HPT_LOX.alpha" right="Junction_LH2_2.f_in2.Tt / HPT_LOX.f_in.Tt" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="(CombCha.W_O + CombCha.W_F) * CombCha.fluid_P_decomp[CombProd] / NozzleExt_1.g_in.W * CombCha.fluid_P_decomp[CombProd_cp] * (NozzleExt_1.g_in.Tt - CombCha.T_c) + CombCha.W_IO / NozzleExt_1.g_in.W * Junction_LOX.f_in2.fluid[Comb_prod_cp] * (NozzleExt_1.g_in.Tt - LPT_LOX.f_in.Tt) + CombCha.W_IF / NozzleExt_1.g_in.W * FlowMeter_1.f_in.fluid[Comb_prod_cp] * (NozzleExt_1.g_in.Tt - CombCha.f_F.T)" right="0" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="FlowMeter_1.f_in.W" right="Inj_F_CC.A * LPRES.FGAMMA(FlowMeter_1.f_in.fluid) * FlowMeter_1.f_in.pt / sqrt(FlowMeter_1.f_in.Tt * LPRES.R(FlowMeter_1.f_in.fluid)) / (((2 + (LPRES.gamma(FlowMeter_1.f_in.fluid) - 1) * Inj_F_CC.M_out ** 2) / (LPRES.gamma(FlowMeter_1.f_in.fluid) + 1)) ** ((LPRES.gamma(FlowMeter_1.f_in.fluid) + 1) / (2 * (LPRES.gamma(FlowMeter_1.f_in.fluid) - 1))) / Inj_F_CC.M_out)" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Junction_LH2_2.f_in1.W * sqrt(LPRES.R(Junction_LH2_2.f_in1.fluid) * Junction_LH2_2.f_in1.Tt) / Junction_LH2_2.A_in1 / Junction_LH2_2.f_in1.pt" right="sqrt(LPRES.gamma(Junction_LH2_2.f_in1.fluid)) * Junction_LH2_2.M_in1 * (1 + (LPRES.gamma(Junction_LH2_2.f_in1.fluid) - 1) / 2 * Junction_LH2_2.M_in1 ** 2) ** (-(LPRES.gamma(Junction_LH2_2.f_in1.fluid) + 1) / 2 / (LPRES.gamma(Junction_LH2_2.f_in1.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Junction_LH2_2.f_in1.pt / Junction_LH2_2.p_in1" right="(1 + (LPRES.gamma(Junction_LH2_2.f_in1.fluid) - 1) / 2 * Junction_LH2_2.M_in1 ** 2) ** (LPRES.gamma(Junction_LH2_2.f_in1.fluid) / (LPRES.gamma(Junction_LH2_2.f_in1.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="(GasGen_LOX.W_O + GasGen_LOX.W_F) * GasGen_LOX.fluid_P_decomp[CombProd] / HPT_LOX.f_in.W * GasGen_LOX.fluid_P_decomp[CombProd_cp] * (HPT_LOX.f_in.Tt - GasGen_LOX.T_c) + GasGen_LOX.W_IO / HPT_LOX.f_in.W * Junction_LOX.f_in2.fluid[Comb_prod_cp] * (HPT_LOX.f_in.Tt - SF_LOX_3.f_in.Tt) + GasGen_LOX.W_IF / HPT_LOX.f_in.W * GasGen_LOX.f_F.fluid[Comb_prod_cp] * (HPT_LOX.f_in.Tt - GasGen_LOX.f_F.T)" right="0" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="GasGen_LOX.f_F.W" right="Inj_F_GG_LOX.A * LPRES.FGAMMA(GasGen_LOX.f_F.fluid) * Inj_F_GG_LOX.f_in.pt / sqrt(Inj_F_GG_LOX.f_in.Tt * LPRES.R(GasGen_LOX.f_F.fluid)) / (((2 + (LPRES.gamma(GasGen_LOX.f_F.fluid) - 1) * Inj_F_GG_LOX.M_out ** 2) / (LPRES.gamma(GasGen_LOX.f_F.fluid) + 1)) ** ((LPRES.gamma(GasGen_LOX.f_F.fluid) + 1) / (2 * (LPRES.gamma(GasGen_LOX.f_F.fluid) - 1))) / Inj_F_GG_LOX.M_out)" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="LowPump_LOX.phi" right="Junction_LOX.f_in1.W / (LowPump_LOX.A_in * LowPump_LOX.U * LPRES.rho(Junction_LOX.f_in1.fluid))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="NozzleExt_1.g_in.A_out / CombCha.A_th" right="LPRES.FGAMMA(NozzleExt_1.g_in.fluid) / ((CombCha.p_out_ch / CombCha.f_O.p_c) ** (1 / LPRES.gamma(NozzleExt_1.g_in.fluid)) * sqrt(2 * LPRES.gamma(NozzleExt_1.g_in.fluid) * (1 - (CombCha.p_out_ch / CombCha.f_O.p_c) ** ((LPRES.gamma(NozzleExt_1.g_in.fluid) - 1) / LPRES.gamma(NozzleExt_1.g_in.fluid))) / (LPRES.gamma(NozzleExt_1.g_in.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="NozzleExt_1.g_in.W * sqrt(LPRES.R(NozzleExt_1.g_in.fluid) * NozzleExt_1.g_in.Tt) / ThrustMonitor.g.A_out / CombCha.f_O.p_c" right="sqrt(LPRES.gamma(NozzleExt_1.g_in.fluid)) * ThrustMonitor.M_out * (1 + (LPRES.gamma(NozzleExt_1.g_in.fluid) - 1) / 2 * ThrustMonitor.M_out ** 2) ** (-(LPRES.gamma(NozzleExt_1.g_in.fluid) + 1) / 2 / (LPRES.gamma(NozzleExt_1.g_in.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="HighPump_LH2.phi" right="SF_LH2_1.f_in.W / (HighPump_LH2.A_in * HighPump_LH2.U * LPRES.rho(CoolingJacket_CC.l.fluid))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="LowPump_LH2.phi" right="SF_LH2_1.f_in.W / (LowPump_LH2.A_in * LowPump_LH2.U * LPRES.rho(CoolingJacket_CC.l.fluid))" internal="yes" tolerance="1e-06"/>
+        </closure>
+      </global>
+    </steady>
+  </case>
+</experiment>
