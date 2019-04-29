@@ -15,7 +15,7 @@
     <steady id="steady2" description="Steady">
       <general>
         <caltype/>
-        <nlsolver maxfval="40000000" toltype="ABSTOL" smethod="NR" maxbroyden="60" tolerance="10000000" maxjaceval="6000" rdigits="9" maxiter="10000000"/>
+        <nlsolver maxfval="40000000" toltype="ABSTOL" smethod="NR" maxbroyden="60000" tolerance="10000000" maxjaceval="6000" rdigits="9" maxiter="10000000"/>
         <stopSimulation stopBadOperation="no"/>
         <debug level="3"/>
         <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
@@ -29,11 +29,11 @@
           <variable id="Inlet_LOX.Tt" alias="" value="90"/>
           <variable id="Inlet_LOX.pt" alias="" value="689476"/>
           <variable id="LPRES.Altitude" alias="" value="100000"/>
-          <variable id="Valve_1.A" alias="" value="100000"/>
-          <variable id="Valve_2.A" alias="" value="100000"/>
-          <variable id="Valve_3.A" alias="" value="100000"/>
-          <variable id="Valve_4.A" alias="" value="100000"/>
-          <variable id="Valve_5.A" alias="" value="100000"/>
+          <variable id="Valve_1.A" alias="" value="1000"/>
+          <variable id="Valve_2.A" alias="" value="1000"/>
+          <variable id="Valve_3.A" alias="" value="1000"/>
+          <variable id="Valve_4.A" alias="" value="1000"/>
+          <variable id="Valve_5.A" alias="" value="1000"/>
         </bounds>
         <initial>
           <variable id="Junction_LOX.f_in2.fluid[Comb_prod_M]" maxStepAbs="1.5e-08" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.5e-08" dxRel="1.5e-08"/>

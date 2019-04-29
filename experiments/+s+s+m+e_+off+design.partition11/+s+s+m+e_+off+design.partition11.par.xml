@@ -23,8 +23,6 @@
   <variable name="Valve_5.A"/>
 </boundaries>
 <algebraics>
-  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
-  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_cp]"/>
   <variable name="CombCha.M_r"/>
   <variable name="GasGen_LH2.W_F"/>
   <variable name="GasGen_LH2.phi"/>
@@ -40,6 +38,8 @@
   <variable name="Junction_LH2_2.f_in1.W"/>
   <variable name="Junction_LOX.f_in1.W"/>
   <variable name="Junction_LOX.f_in2.W"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_cp]"/>
   <variable name="LPT_LOX.U"/>
   <variable name="LPT_LOX.f_in.Tt"/>
   <variable name="NozzleExt_1.M_r"/>

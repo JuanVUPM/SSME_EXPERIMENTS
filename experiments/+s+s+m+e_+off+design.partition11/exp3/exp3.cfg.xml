@@ -9,12 +9,10 @@
 					<var name="#ESI"/>
 					<var name="#Case"/>
 					<var name="#Point"/>
-					<var name="Estado"/>
-					<var name="Junction_LOX.f_in2.Tt"/>
-					<var name="Junction_LOX.f_in2.pt"/>
-					<var name="LPT_LOX.eta_d"/>
-					<var name="LPT_LOX.f_in.Tt"/>
-					<var name="LPT_LOX.f_in.pt"/>
+					<var name="CoolingJacket_CC.g.W"/>
+					<var name="CoolingJacket_NE.l.W"/>
+					<var name="Valve_1.dp"/>
+					<var name="Valve_1.f_in.W"/>
 				</table>
 			</tableWindow>
 		</tab>
@@ -51,9 +49,9 @@
 			</tab> 
 		</layout>
 	</watch>
-	<outputWindow height="192" width="958" visible="true" pos="bottom" />
+	<outputWindow height="192" width="1920" visible="true" pos="bottom" />
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
-	<mainWindow  mode="normal" height="1008" width="958" posX="961" posY="31" currentTab="Tab_1" />
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
 </experiment>

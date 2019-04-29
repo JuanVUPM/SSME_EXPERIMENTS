@@ -1,14 +1,15 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: SSME_EXPERIMENTS
- COMPONENT: SSME_OffDesign
- PARTITION: partition11
- EXPERIMENT: exp2
+ COMPONENT: SSME_Design_V
+ PARTITION: OffDesign
+ EXPERIMENT: exp3
  TEMPLATE: STEADY
- CREATION DATE: 11/04/2019
+ CREATION DATE: 23/04/2019
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT exp2 ON SSME_OffDesign.partition11
+EXPERIMENT exp3 ON SSME_Design_V.OffDesign
    DECLS
+
    OBJECTS
    INIT
       -- initial values for algebraics
@@ -24,15 +25,15 @@ EXPERIMENT exp2 ON SSME_OffDesign.partition11
       Junction_LH2_2.M_in2 = 0.3
       Junction_LH2_2.M_out = 0.3
       Junction_LH2_2.f_in1.W = 1
-      Junction_LOX.f_in1.W = 1
       Junction_LOX.f_in2.W = 1
       LPT_LOX.U = 0
       LPT_LOX.f_in.Tt = 1
       NozzleExt_1.M_r = 0
+      SF_LOX_2.f_in.W = 1
+      LowPump_LH2.U = 500
       CombCha.p_out_ch = 100
       ThrustMonitor.M_out = 100
       HighPump_LH2.U = 500
-      LowPump_LH2.U = 500
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
@@ -40,24 +41,24 @@ EXPERIMENT exp2 ON SSME_OffDesign.partition11
       Inlet_LH2.pt = 206842
       Inlet_LOX.Tt = 90
       Inlet_LOX.pt = 689476
-      LPRES.Altitude = 100000
-      Valve_1.A = 1000
-      Valve_2.A = 1000
-      Valve_3.A = 1000
-      Valve_4.A = 1000
-      Valve_5.A = 1000
+		LPRES.Altitude = 100000
+      Valve_1.A = 0.00448222821*3/4
+      Valve_2.A = 0.00551357206
+      Valve_3.A = 0.00401972328*3/4
+      Valve_4.A = 6.98255084e-5*3/4
+      Valve_5.A = 0.000215087184*3/4
 
    BODY
       -- report results in file reportAll.rpt
       REPORT_LIST("reportAll","*",TRUE)
-		RESTORE_STATE("C:\PROOSIS_3.8.1\LPRES_devel\WORKSPACE\SSME_EXPERIMENTS\experiments\+s+s+m+e_ajuste.+design\exp1\Design.xml")
+		RESTORE_STATE("C:\PROOSIS_3.8.1\LPRES_devel\WORKSPACE\SSME_EXPERIMENTS\experiments\+s+s+m+e_+design_+v.+design\exp1\Design.xml")
       DEBUG_LEVEL= 3      -- Range 0..4
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
       --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
       --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
       TOLTYPE= ABSTOL -- convergence criteria
-      TOLERANCE = 1e-06 -- steady solver relative tolerance 
-
+      TOLERANCE = 1e-5 -- steady solver relative tolerance 
+		
       -- Call the steady state function
       STEADY()
 

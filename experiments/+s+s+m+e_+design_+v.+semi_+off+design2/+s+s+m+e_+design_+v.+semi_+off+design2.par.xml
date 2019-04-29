@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="SSME_OffDesign" partition="OffDesign">
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="SSME_Design_V" partition="Semi_OffDesign2">
 <noDerivatives value="FALSE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
@@ -11,42 +11,45 @@
 <generateParInfoHTML value="TRUE"/>
 <generateMaxSignificantDigits value="FALSE"/>
 <boundaries>
+  <variable name="CombCha.OF"/>
+  <variable name="CombCha.f_O.p_c"/>
+  <variable name="GasGen_LH2.OF"/>
+  <variable name="GasGen_LOX.OF"/>
   <variable name="Inlet_LH2.Tt"/>
   <variable name="Inlet_LH2.pt"/>
   <variable name="Inlet_LOX.Tt"/>
   <variable name="Inlet_LOX.pt"/>
+  <variable name="Junction_LH2_1.f_in1.W"/>
   <variable name="LPRES.Altitude"/>
-  <variable name="Valve_1.A"/>
-  <variable name="Valve_2.A"/>
-  <variable name="Valve_3.A"/>
-  <variable name="Valve_4.A"/>
-  <variable name="Valve_5.A"/>
 </boundaries>
 <algebraics>
-  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
-  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_cp]"/>
   <variable name="CombCha.M_r"/>
   <variable name="CombCha.W_F"/>
-  <variable name="FlowMeter_1.f_in.fluid[Comb_prod]"/>
+  <variable name="CoolingJacket_NE.h.T"/>
   <variable name="GasGen_LH2.W_F"/>
-  <variable name="GasGen_LOX.W_F"/>
-  <variable name="HighPump_LH2.f_in.pt"/>
+  <variable name="HighPump_LH2.f_in.Tt"/>
   <variable name="HighPump_LOX.U"/>
-  <variable name="HighPump_LOX.f_in.W"/>
-  <variable name="HighPump_LOX2.f_in.W"/>
+  <variable name="Inj_F_GG_LOX.M_out"/>
   <variable name="Junction_LH2_1.M_in2"/>
   <variable name="Junction_LH2_1.M_out"/>
   <variable name="Junction_LH2_1.f_in2.pt"/>
+  <variable name="Junction_LH2_2.M_in1"/>
   <variable name="Junction_LH2_2.M_in2"/>
   <variable name="Junction_LH2_2.M_out"/>
-  <variable name="Junction_LH2_2.f_in1.W"/>
-  <variable name="Junction_LOX.f_in1.W"/>
+  <variable name="Junction_LOX.f_in2.W"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
   <variable name="LPT_LOX.U"/>
   <variable name="LPT_LOX.f_in.Tt"/>
   <variable name="NozzleExt_1.M_r"/>
+  <variable name="SF_LOX_2.f_in.W"/>
+  <variable name="LowPump_LH2.U"/>
   <variable name="CombCha.p_out_ch"/>
   <variable name="ThrustMonitor.M_out"/>
   <variable name="HighPump_LH2.U"/>
-  <variable name="LowPump_LH2.U"/>
+  <variable name="Valve_2.A"/>
+  <variable name="Valve_1.A"/>
+  <variable name="Valve_3.A"/>
+  <variable name="Valve_4.A"/>
+  <variable name="Valve_5.A"/>
 </algebraics>
 </partitionInfo>

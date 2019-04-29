@@ -1,24 +1,32 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: SSME_EXPERIMENTS
- COMPONENT: SSME_ajuste
+ COMPONENT: SSME_Design_V
  PARTITION: Design
  EXPERIMENT: exp1
  TEMPLATE: STEADY
- CREATION DATE: 29/03/2019
+ CREATION DATE: 23/04/2019
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT exp1 ON SSME_ajuste.Design
-  DECLS
+EXPERIMENT exp1 ON SSME_Design_V.Design
+   DECLS
+		REAL densidad
    OBJECTS
    INIT
       -- initial values for algebraics
-      GasGen_LOX.W_F = 19.05
-      Junction_LOX.A_in1 = 0.01
-      Junction_LOX.V_in2 = 10
+      
+      Valve_2.A = 0.001
+      Valve_1.A = 0.001
+      Valve_3.A = 0.001
+      Valve_4.A = 0.001
+      Valve_5.A = 0.00001
+		
+		GasGen_LOX.W_F = 19.05
+      Junction_LOX.A_in1 = 0.5
+      Junction_LOX.V_in2 = 50
       Junction_LH2_1.M_in2 = 0.1
       Junction_LH2_1.M_out = 0.3
       Junction_LH2_2.M_in2 = 0.3
-      Junction_LH2_2.M_out = 0.3
+      Junction_LH2_2.M_out = 0.1
       CombCha.p_out_ch = 100
       CombCha.A_wet = 1
       ThrustMonitor.M_out = 100
@@ -33,7 +41,7 @@ EXPERIMENT exp1 ON SSME_ajuste.Design
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      CombCha.f_O.p_c = 19794855.96
+		CombCha.f_O.p_c = 19794855.96
       GasGen_LH2.OF = 0.87012987
       GasGen_LH2.f_O.p_c = 33046584.68
       GasGen_LOX.f_O.p_c = 33046584.68
@@ -42,7 +50,7 @@ EXPERIMENT exp1 ON SSME_ajuste.Design
       HPT_LOX.f_in.W = 30.84
       HPT_LOX.rpm = 22250
       HighPump_LH2.dp = 39e6
-      HighPump_LH2.f_in.W = 70.30
+      SF_LH2_1.f_in.W = 70.30
       HighPump_LH2.phi = 0.05
       HighPump_LOX.dp = 24848715.04
       HighPump_LOX.phi = 0.05
@@ -55,8 +63,8 @@ EXPERIMENT exp1 ON SSME_ajuste.Design
       Inlet_LOX.pt = 689476
       Junction_LH2_1.M_in1 = 0.1
       Junction_LH2_1.f_in1.W = 13.15
-      Junction_LH2_2.M_in1 = 0.1
-      Junction_LOX.f_in1.W = 423.65
+      Junction_LH2_2.M_in1 = 0.2
+      SF_LOX_2.f_in.W = 423.65
       Junction_LOX.f_in2.W = 84.36
       Junction_LOX.p_out = 2.5e6
       LPRES.Altitude = 100000
@@ -68,20 +76,27 @@ EXPERIMENT exp1 ON SSME_ajuste.Design
       LowPump_LH2.phi = 0.05
       LowPump_LOX.dp = 2213217.96
       LowPump_LOX.phi = 0.05
+    
+      Valve_1.dp = 1113503.75
+      Valve_2.dp = 2227007.5
+      Valve_3.dp = 3.77e6
+      Valve_4.dp = 8.27e6
+      Valve_5.dp = 8.91e6
 
    BODY
       -- report results in file reportAll.rpt
       REPORT_LIST("reportAll","*",TRUE)
 
-      DEBUG_LEVEL= 3      -- Range 0..4
+      DEBUG_LEVEL= 1      -- Range 0..4
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
       --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
       --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
-      TOLTYPE= ABSTOL -- convergence criteria
+      TOLTYPE= RELTOL -- convergence criteria
       TOLERANCE = 1e-06 -- steady solver relative tolerance 
-
+		densidad = rho(Junction_LOX.f_in2.fluid)
       -- Call the steady state function
       STEADY()
 		SAVE_STATE("Design.xml")
+		--Estado = State(NozzleExt_1.g_in.fluid)
 
 END EXPERIMENT

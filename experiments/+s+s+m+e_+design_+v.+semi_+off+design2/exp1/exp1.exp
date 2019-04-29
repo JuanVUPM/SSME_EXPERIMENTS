@@ -1,0 +1,59 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: SSME_Design_V
+ PARTITION: Semi_OffDesign2
+ EXPERIMENT: exp1
+ TEMPLATE: TRANSIENT
+ CREATION DATE: 26/04/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON SSME_Design_V.Semi_OffDesign2
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+		CombCha.OF = 5.86993149
+      CombCha.f_O.p_c = 19794856-TIME*1000
+      Junction_LH2_1.f_in1.W = 13.15
+      GasGen_LH2.OF = 0.87012987
+      GasGen_LOX.OF = 0.468377199
+      Inlet_LH2.Tt = 20
+      Inlet_LH2.pt = 206842
+      Inlet_LOX.Tt = 90
+      Inlet_LOX.pt = 689476
+      LPRES.Altitude = 100000
+
+   BODY
+      -- creates an ASCII file with the results in table format
+      -- REPORT_TABLE("results.rpt", "*",TRUE)
+
+      -- set the debug level (valid range [0,4])
+      RESTORE_STATE("C:\PROOSIS_3.8.1\LPRES_devel\WORKSPACE\SSME_EXPERIMENTS\experiments\+s+s+m+e_+design_+v.+design\exp1\Design.xml")	
+      DEBUG_LEVEL= 4      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= ABSTOL -- convergence criteria
+      TOLERANCE = 1e-3 -- steady solver relative tolerance 
+		MAXITER = 1000
+      -- Call the steady state function
+      STEADY()
+		
+		REL_ERROR = 1e-05 -- transient solver relative tolerance
+      ABS_ERROR = 1e-05 -- transient solver absolute tolerance
+      TOLERANCE = 1e-05 -- steady solver relative tolerance
+      INIT_INTEG_STEP = -1 -- initial integration step size (-1 means use the solver estimation) 
+      MAX_INTEG_STEP = -1 -- maximum integration step size (-1 means use the solver estimation) 
+      NSTEPS = 1 -- Only for explicit solvers use CINT/NSTEPS as integration step size
+      REPORT_MODE = IS_EVENT -- by default it reports results at every CINT and event detection. Other valid options are IS_STEP, IS_CINT and IS_MANUAL_REFRESH 
+
+      -- simulate a transient in range[TIME,TSTOP] reporting every CINT
+      TIME = 0
+      TSTOP = 3200
+      CINT = 0.1
+      INTEG()
+END EXPERIMENT

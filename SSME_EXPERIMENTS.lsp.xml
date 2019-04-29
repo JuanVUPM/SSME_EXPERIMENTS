@@ -17,6 +17,7 @@
   <file name="a.eds"/>
   <file name="SSME_OffDesign.eds"/>
   <file name="SSME_OffDesign_NV.eds"/>
+  <file name="SSME_Design_V.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>

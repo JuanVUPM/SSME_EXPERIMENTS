@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="SSME_OffDesign_NV" partition="partition1">
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="SSME_Design_V" partition="OffDesign">
 <noDerivatives value="FALSE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
@@ -16,6 +16,11 @@
   <variable name="Inlet_LOX.Tt"/>
   <variable name="Inlet_LOX.pt"/>
   <variable name="LPRES.Altitude"/>
+  <variable name="Valve_1.A"/>
+  <variable name="Valve_2.A"/>
+  <variable name="Valve_3.A"/>
+  <variable name="Valve_4.A"/>
+  <variable name="Valve_5.A"/>
 </boundaries>
 <algebraics>
   <variable name="CombCha.M_r"/>
@@ -33,6 +38,7 @@
   <variable name="Junction_LH2_2.f_in1.W"/>
   <variable name="Junction_LOX.f_in2.W"/>
   <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_cp]"/>
   <variable name="LPT_LOX.U"/>
   <variable name="LPT_LOX.f_in.Tt"/>
   <variable name="NozzleExt_1.M_r"/>
