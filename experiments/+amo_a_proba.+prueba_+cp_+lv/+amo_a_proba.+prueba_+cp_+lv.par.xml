@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Amo_a_proba" partition="Prueba_Cp_Lv">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<boundaries>
+  <variable name="Pipe_1.f_in.Tt"/>
+  <variable name="Pipe_1.f_in.W"/>
+  <variable name="Pipe_1.f_in.fluid[Air]"/>
+  <variable name="Pipe_1.f_in.fluid[Ar]"/>
+  <variable name="Pipe_1.f_in.fluid[CH4]"/>
+  <variable name="Pipe_1.f_in.fluid[CO2]"/>
+  <variable name="Pipe_1.f_in.fluid[CO]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod_Lv]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod_M]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod_T_boil]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod_c]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod_cond]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod_cp]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod_cp_g]"/>
+  <variable name="Pipe_1.f_in.fluid[Comb_prod_visc]"/>
+  <variable name="Pipe_1.f_in.fluid[H2O2]"/>
+  <variable name="Pipe_1.f_in.fluid[H2O]"/>
+  <variable name="Pipe_1.f_in.fluid[H2O_vapour]"/>
+  <variable name="Pipe_1.f_in.fluid[H2]"/>
+  <variable name="Pipe_1.f_in.fluid[HNO3]"/>
+  <variable name="Pipe_1.f_in.fluid[He]"/>
+  <variable name="Pipe_1.f_in.fluid[IPA]"/>
+  <variable name="Pipe_1.f_in.fluid[JP_10]"/>
+  <variable name="Pipe_1.f_in.fluid[Kerox]"/>
+  <variable name="Pipe_1.f_in.fluid[LCH4]"/>
+  <variable name="Pipe_1.f_in.fluid[LF2]"/>
+  <variable name="Pipe_1.f_in.fluid[LH2]"/>
+  <variable name="Pipe_1.f_in.fluid[LOX]"/>
+  <variable name="Pipe_1.f_in.fluid[MMH]"/>
+  <variable name="Pipe_1.f_in.fluid[MMH_vapour]"/>
+  <variable name="Pipe_1.f_in.fluid[N2H4]"/>
+  <variable name="Pipe_1.f_in.fluid[N2]"/>
+  <variable name="Pipe_1.f_in.fluid[NH3]"/>
+  <variable name="Pipe_1.f_in.fluid[NTO]"/>
+  <variable name="Pipe_1.f_in.fluid[O2]"/>
+  <variable name="Pipe_1.f_in.fluid[Oil]"/>
+  <variable name="Pipe_1.f_in.fluid[RP_1]"/>
+  <variable name="Pipe_1.f_in.fluid[UDMH]"/>
+  <variable name="Pipe_1.f_in.pt"/>
+</boundaries>
+</partitionInfo>

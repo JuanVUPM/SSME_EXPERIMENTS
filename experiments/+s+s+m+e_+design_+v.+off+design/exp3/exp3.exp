@@ -42,11 +42,11 @@ EXPERIMENT exp3 ON SSME_Design_V.OffDesign
       Inlet_LOX.Tt = 90
       Inlet_LOX.pt = 689476
 		LPRES.Altitude = 100000
-      Valve_1.A = 0.00448222821*3/4
+      Valve_1.A = 0.00448222821
       Valve_2.A = 0.00551357206
-      Valve_3.A = 0.00401972328*3/4
-      Valve_4.A = 6.98255084e-5*3/4
-      Valve_5.A = 0.000215087184*3/4
+      Valve_3.A = 0.00401972328
+      Valve_4.A = 6.98255084e-5
+      Valve_5.A = 0.000215087184
 
    BODY
       -- report results in file reportAll.rpt

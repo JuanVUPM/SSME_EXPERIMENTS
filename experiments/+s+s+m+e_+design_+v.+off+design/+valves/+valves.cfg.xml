@@ -2,39 +2,7 @@
 <experiment version="1.4.0">
 	<experimentViews>
 		<tab name="Tab_1">
-			<plotWindow title="Plot_5" x="0" y="250" dx="350" dy="250">
-				<plot id="Plot_5" graphType="plot_time">
-						<title value="">
-							<font/>
-						</title>
-						<axeX variableName="TIME">
-							<titleAxe value="TIME"/>
-							<scale scaleType="auto"/>
-						</axeX>
-						<axeY>
-							<titleAxe value=""/>
-							<scale scaleType="auto"/>
-						</axeY>
-						<layout>
-							<font/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font/>
-						</legend>
-						<chartStyles>
-							<var name="Inj_F_CC.v_ideal" nick=""/>
-							<var name="Inj_F_GG_LH2.v_ideal" nick=""/>
-							<var name="Inj_F_GG_LOX.v_ideal" nick=""/>
-							<var name="Inj_O_CC.v_ideal" nick=""/>
-							<var name="Inj_O_GG_LH2.v_ideal" nick=""/>
-							<var name="Inj_O_GG_LOX.v_ideal" nick=""/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
-			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
 				<plot id="Plot_1" graphType="plot_time">
 						<title value="">
 							<font/>
@@ -65,36 +33,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_2" x="350" y="0" dx="350" dy="250">
-				<plot id="Plot_2" graphType="plot_time">
-						<title value="">
-							<font/>
-						</title>
-						<axeX variableName="TIME">
-							<titleAxe value="TIME"/>
-							<scale scaleType="auto"/>
-						</axeX>
-						<axeY>
-							<titleAxe value=""/>
-							<scale scaleType="auto"/>
-						</axeY>
-						<layout>
-							<font/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font/>
-						</legend>
-						<chartStyles>
-							<var name="CombCha.OF" nick=""/>
-							<var name="GasGen_LH2.OF" nick=""/>
-							<var name="GasGen_LOX.OF" nick=""/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
-			<plotWindow title="Plot_4" x="1058" y="-1" dx="350" dy="250">
+			<plotWindow title="Plot_4" x="1058" y="-1" dx="350" dy="250" state="maximized">
 				<plot id="Plot_4" graphType="plot_time">
 						<title value="">
 							<font/>
@@ -126,7 +65,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_8" x="1058" y="249" dx="350" dy="250">
+			<plotWindow title="Plot_8" x="1058" y="249" dx="350" dy="250" state="maximized">
 				<plot id="Plot_8" graphType="plot_time">
 						<title value="">
 							<font/>
@@ -155,18 +94,45 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_6" x="348" y="250" dx="350" dy="250">
+			<plotWindow title="Plot_9" x="0" y="491" dx="350" dy="250" state="maximized">
+				<plot id="Plot_9" graphType="plot_time">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel_1.Thrust" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_6" x="348" y="250" dx="350" dy="250" state="maximized">
 				<plot id="Plot_6" graphType="plot_time">
 						<title value="">
 							<font/>
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="TIME"/>
-							<scale minCurrent="317.251" maxCurrent="352.047" scaleType="current"/>
+							<scale scaleType="auto"/>
 						</axeX>
 						<axeY>
 							<titleAxe value=""/>
-							<scale minCurrent="6.32727e+6" maxCurrent="8.8e+6" scaleType="current"/>
+							<scale scaleType="auto"/>
 						</axeY>
 						<layout>
 							<font/>
@@ -186,18 +152,18 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_3" x="708" y="0" dx="350" dy="250">
-				<plot id="Plot_3" graphType="plot_time">
+			<plotWindow title="Plot_10" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_10" graphType="plot_time">
 						<title value="">
 							<font/>
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="TIME"/>
-							<scale minCurrent="220.652" maxCurrent="527.536" scaleType="current"/>
+							<scale scaleType="auto"/>
 						</axeX>
 						<axeY>
 							<titleAxe value=""/>
-							<scale minCurrent="-3.0303e+6" maxCurrent="7.87879e+6" scaleType="current"/>
+							<scale scaleType="auto"/>
 						</axeY>
 						<layout>
 							<font/>
@@ -208,13 +174,40 @@
 							<font/>
 						</legend>
 						<chartStyles>
+							<var name="ControlPanel_1.Isp_0" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_3" x="708" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_3" graphType="plot_time">
+						<title value="">
+							<font family="MS Shell Dlg 2"/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME (s)"/>
+							<scale minCurrent="0" maxCurrent="443.25" minCustom="220.652" maxCustom="527.536" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value="Chamber Pressure"/>
+							<scale minCurrent="802616" maxCurrent="2.02622e+7" minCustom="-3.0303e+6" maxCustom="7.87879e+6" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font family="MS Shell Dlg 2" size="16"/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend isShowed="false">
+							<font family="MS Shell Dlg 2"/>
+						</legend>
+						<chartStyles>
 							<var name="CombCha.f_F.p_c" nick=""/>
 						</chartStyles>
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_7" x="705" y="251" dx="350" dy="250">
-				<plot id="Plot_7" graphType="plot_time">
+			<plotWindow title="Plot_2" x="350" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_2" graphType="plot_time">
 						<title value="">
 							<font/>
 						</title>
@@ -233,6 +226,102 @@
 						</layout>
 						<legend>
 							<font/>
+						</legend>
+						<chartStyles>
+							<var name="CombCha.OF" nick=""/>
+							<var name="GasGen_LH2.OF" nick=""/>
+							<var name="GasGen_LOX.OF" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_5" x="0" y="250" dx="350" dy="250" state="maximized">
+				<plot id="Plot_5" graphType="plot_time">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="Inj_F_CC.v_ideal" nick=""/>
+							<var name="Inj_F_GG_LH2.v_ideal" nick=""/>
+							<var name="Inj_F_GG_LOX.v_ideal" nick=""/>
+							<var name="Inj_O_CC.v_ideal" nick=""/>
+							<var name="Inj_O_GG_LH2.v_ideal" nick=""/>
+							<var name="Inj_O_GG_LOX.v_ideal" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_11" x="1296" y="564" dx="350" dy="250" state="maximized">
+				<plot id="Plot_11" graphType="plot_time">
+						<title value="">
+							<font family="MS Shell Dlg 2"/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value="Valve_1,2,3 Area"/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<axeY2 isShowed="TRUE">
+							<titleAxe value="Valve_4, 5 area"/>
+							<scale scaleType="auto"/>
+						</axeY2>
+						<layout>
+							<font family="MS Shell Dlg 2" size="16"/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font family="MS Shell Dlg 2" size="14"/>
+						</legend>
+						<chartStyles>
+							<var name="Valve_1.A" nick=""/>
+							<var name="Valve_2.A" nick=""/>
+							<var name="Valve_3.A" nick=""/>
+							<var name="Valve_4.A" nick="" isY2="TRUE"/>
+							<var name="Valve_5.A" nick="" isY2="TRUE"/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_7" x="0" y="0" dx="350" dy="250" state="maximized">
+				<plot id="Plot_7" graphType="plot_time">
+						<title value="">
+							<font family="MS Shell Dlg 2"/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="TIME"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<layout>
+							<font family="MS Shell Dlg 2" size="16"/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font family="MS Shell Dlg 2" size="14"/>
 						</legend>
 						<chartStyles>
 							<var name="Inlet_LH2.W" nick=""/>

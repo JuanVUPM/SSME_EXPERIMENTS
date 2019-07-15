@@ -71,7 +71,7 @@
 		</tab>
 		<tab name="Tab_2">
 			<tableWindow title="" x="0" y="0" dx="350" dy="250" state="maximized">
-				<table id="" colums="true">
+				<table id="Table_1" colums="true">
 					<var name="#Calculation id"/>
 					<var name="#Status"/>
 					<var name="#ESI"/>
@@ -118,5 +118,5 @@
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
-	<mainWindow  mode="maximized" currentTab="Tab_2" />
+	<mainWindow  mode="maximized" currentTab="Tab_1" />
 </experiment>

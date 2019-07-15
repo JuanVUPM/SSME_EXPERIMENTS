@@ -18,6 +18,11 @@
   <file name="SSME_OffDesign.eds"/>
   <file name="SSME_OffDesign_NV.eds"/>
   <file name="SSME_Design_V.eds"/>
+  <file name="Heat_Transfer.eds"/>
+  <file name="Heat_transfer_wall.eds"/>
+  <file name="Amo_a_proba.eds"/>
+  <file name="SSME_Heat.eds"/>
+  <file name="SSME_CC_HE.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>

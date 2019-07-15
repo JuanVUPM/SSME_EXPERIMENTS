@@ -148,6 +148,35 @@
 					</plot>
 			</plotWindow>
 		</tab>
+		<tab name="Tab_6">
+			<plotWindow title="Plot_1" x="0" y="0" dx="1134" dy="686">
+				<plot id="Plot_1" graphType="plot_x_y">
+						<title value="">
+							<font/>
+						</title>
+						<axeX variableName="HighPump_LH2.dp">
+							<titleAxe value="HighPump_LH2.dp"/>
+							<scale minCurrent="2.9e+7" maxCurrent="2.9e+7" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value=""/>
+							<scale minCurrent="343.969" maxCurrent="343.969" scaleType="current"/>
+						</axeY>
+						<layout>
+							<font/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font/>
+						</legend>
+						<chartStyles>
+							<var name="ControlPanel_1.Isp_0" nick=""/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+		</tab>
 	</experimentViews>
 	<watch width="268" height="192" visible="true" pos="right" >
 		<currentTab name="view"/>
@@ -185,5 +214,5 @@
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
-	<mainWindow  mode="maximized" currentTab="Tab_5" />
+	<mainWindow  mode="maximized" currentTab="Tab_6" />
 </experiment>

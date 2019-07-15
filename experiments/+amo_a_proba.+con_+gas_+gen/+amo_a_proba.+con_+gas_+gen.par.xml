@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Amo_a_proba" partition="Con_Gas_Gen">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="Injector_1.A"/>
+  <variable name="Injector_2.A"/>
+</noDatas>
+<boundaries>
+  <variable name="GasGen_1.f_F.W"/>
+  <variable name="GasGen_1.f_O.W"/>
+  <variable name="Heat_exchanger_1.f_in.pt"/>
+  <variable name="Heat_exchanger_1.h.A"/>
+  <variable name="Heat_exchanger_1.h.Q"/>
+  <variable name="Inlet_1.Tt"/>
+  <variable name="Inlet_1.pt"/>
+  <variable name="Inlet_2.Tt"/>
+  <variable name="Inlet_2.pt"/>
+</boundaries>
+</partitionInfo>

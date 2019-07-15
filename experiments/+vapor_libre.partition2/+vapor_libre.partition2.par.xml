@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<partitionInfo version="1.0" library="SSME_EXPERIMENTS" component="Vapor_libre" partition="partition2">
+<noDerivatives value="FALSE"/>
+<inhibitReductionConstantCoefEqts value="FALSE"/>
+<generatePartitionClass value="FALSE"/>
+<removeNotUsedVars value="FALSE"/>
+<showPropertyPanel value="FALSE"/>
+<generateProtectedMathFunctions value="TRUE"/>
+<generatePerformanceMeters value="FALSE"/>
+<generateObfuscatedCpp value="FALSE"/>
+<generateParInfoHTML value="TRUE"/>
+<generateMaxSignificantDigits value="FALSE"/>
+<boundaries>
+  <variable name="Heat_exchanger_LL_1.h.A"/>
+  <variable name="Heat_exchanger_LL_1.h.T"/>
+  <variable name="Heat_exchanger_LL_1.l_in.W"/>
+  <variable name="Inlet.Tt"/>
+  <variable name="Inlet.pt"/>
+  <variable name="Outlet_1.Tt"/>
+</boundaries>
+</partitionInfo>

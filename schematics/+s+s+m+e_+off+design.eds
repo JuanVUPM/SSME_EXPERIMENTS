@@ -146,9 +146,9 @@
 
 	<component id="ThrustMonitor" library="LPRES" type="ThrustMonitor" layer="1"  hotPort="i" >
 	
-		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="1299" dy="970" onLabel="true" />
+		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="1016" dy="1012" onLabel="true" />
 	
-		<label cx="43.5" cy="12" dx="1520.5" dy="1132" />
+		<label cx="43.5" cy="12" dx="1237.5" dy="1174" />
 	
 	</component>
 
@@ -421,7 +421,7 @@
 
 	<connector id="Connector_16" sShape="FlowMeter_2" sPort="f_out" eShape="Inj_O_CC" ePort="f_in" points="891,712"  intermediate1="1" lineColor="85,255,0"   />
 
-	<connector id="Connector_18" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="1663,1134"  intermediate1="1"  />
+	<connector id="Connector_18" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="1663,1176"  intermediate1="1"  />
 
 	<connector id="Connector_19" sShape="CombCha" sPort="i" eShape="ControlPanel_1" ePort="i_Comb" points="923,922"  intermediate1="1" lineWidth="0.5" lineType="2"   />
 
@@ -435,7 +435,7 @@
 
 	<connector id="Connector_17" sShape="CombCha" sPort="g" eShape="NozzleExt_1" ePort="g_in"  />
 
-	<connector id="Connector_3" sShape="NozzleExt_1" sPort="g_out" eShape="ThrustMonitor" ePort="g" points="1599,1086"  intermediate2="1"  />
+	<connector id="Connector_3" sShape="NozzleExt_1" sPort="g_out" eShape="ThrustMonitor" ePort="g" points="1316,1086"  intermediate2="1"  />
 
 	<connector id="Connector_7" sShape="LPT_LH2" sPort="m" eShape="LowPump_LH2" ePort="m" points="635,222 376,222"  intermediate2="2"  />
 

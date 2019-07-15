@@ -89,10 +89,16 @@ EXPERIMENT exp1 ON SSME_design.Design_velocidades
       -- Call the steady state function
       STEADY()
 		
-		FOR(i = 0; i <= 10e6; i= i + 0.1e6)
-			HighPump_LH2.dp = 39e6-i
+		--FOR(i = 0; i <= 1000e6; i= i + 0.1e6)
+			HighPump_LH2.dp = 39e6+i
       	-- Call the steady state function
-      	STEADY()
-		END FOR
+     -- 	STEADY()
+		--END FOR
+		
+		--FOR(i = 0; i <= 1000e6; i= i + 0.1e6)
+		--	HighPump_LH2.dp = 29e6+i
+      	-- Call the steady state function
+      	--STEADY()
+		--END FOR
 
 END EXPERIMENT

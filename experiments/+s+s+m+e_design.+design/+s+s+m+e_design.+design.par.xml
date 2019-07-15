@@ -77,10 +77,10 @@
   <variable name="LowPump_LOX.phi"/>
 </boundaries>
 <algebraics>
-  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
-  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_cp]"/>
   <variable name="Junction_LOX.V_in2"/>
   <variable name="Junction_LOX.f_in2.W"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_M]"/>
+  <variable name="Junction_LOX.f_in2.fluid[Comb_prod_cp]"/>
   <variable name="Junction_LOX.p_in1"/>
   <variable name="GasGen_LH2.W_F"/>
   <variable name="GasGen_LOX.W_F"/>

@@ -86,6 +86,24 @@
 				</table>
 			</tableWindow>
 		</tab>
+		<tab name="Tab_6">
+			<tableWindow title="" x="0" y="0" dx="350" dy="250" state="maximized">
+				<table id="Table_1" colums="false">
+					<var name="#Calculation id"/>
+					<var name="#Status"/>
+					<var name="#ESI"/>
+					<var name="#Case"/>
+					<var name="#Point"/>
+					<var name="CombCha.A_wet"/>
+					<var name="CoolingJacket_CC.Q"/>
+					<var name="CoolingJacket_NE.Q"/>
+					<var name="NozzleExt_1.A_wet"/>
+					<var name="CoolingJacket_CC.g.Tt"/>
+					<var name="CoolingJacket_CC.g.W"/>
+					<var name="CoolingJacket_CC.l.Tt"/>
+				</table>
+			</tableWindow>
+		</tab>
 	</experimentViews>
 	<watch width="100" height="192" visible="false" pos="right" >
 		<currentTab name="view"/>
@@ -119,9 +137,9 @@
 			</tab> 
 		</layout>
 	</watch>
-	<outputWindow height="192" width="1920" visible="true" pos="bottom" />
+	<outputWindow height="192" width="958" visible="true" pos="bottom" />
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
-	<mainWindow  mode="maximized" currentTab="Tab_1" />
+	<mainWindow  mode="normal" height="1008" width="958" posX="961" posY="31" currentTab="Tab_1" />
 </experiment>

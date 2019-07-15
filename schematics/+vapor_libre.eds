@@ -12,27 +12,77 @@
 		<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; LIBRARY: SSME_EXPERIMENTS&#60;/p&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; FILE: Vapor_libre&#60;/p&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; CREATION DATE: 06/03/2019&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
 	</text>
 
-	<component id="New_Junction_1" library="LPRES" type="New_Junction" layer="1"  hotPort="f_out" >
+	<component id="Outlet_1" library="LPRES" type="Outlet" layer="1" >
 	
-		<symbol cx="244" cy="182" sx="113" sy="61" dx="150" dy="74" onLabel="true" />
+		<symbol cx="232" cy="128.029" sx="89" sy="64.9412" dx="480" dy="376" onLabel="true" />
 	
-		<label cx="51" cy="12" dx="335.5" dy="284" />
+		<label cx="28.5" cy="12" dx="680" dy="534" />
+	
+	</component>
+
+	<component id="Inlet_1" library="LPRES" type="Inlet" layer="1"  hotPort="f" >
+	
+		<symbol cx="208.029" cy="72" sx="64.9412" sy="89" dx="47.9706" dy="463.971" rotation="-90" onLabel="true" />
+	
+		<label cx="23" cy="12" dx="231" dy="577.971" />
+	
+	</component>
+
+	<component id="Outlet_2" library="LPRES" type="Outlet" layer="1" >
+	
+		<symbol cx="232" cy="128.029" sx="89" sy="64.9412" dx="16" dy="175.941" rotation="180" onLabel="true" />
+	
+		<label cx="28.5" cy="12" dx="208" dy="352" />
+	
+	</component>
+
+	<component id="Inlet_2" library="LPRES" type="Inlet" layer="1"  hotPort="f" >
+	
+		<symbol cx="208.029" cy="72" sx="64.9412" sy="89" dx="576" dy="184" onLabel="true" />
+	
+		<label cx="23" cy="12" dx="759.029" dy="298" />
 	
 		<instanceData>
-			<datum id="A_ratio1" value="0.5" pos="D" />
+			<datum id="fluid" value="O2" pos="D" />
 		</instanceData>
 	
 	</component>
 
-	<component id="Outlet_1" library="LPRES" type="Outlet" layer="1" >
+	<component id="Heat_exchanger_1" library="LPRES" type="Heat_exchanger" layer="1"  hotPort="f_out" >
 	
-		<symbol cx="234" cy="128.029" sx="93" sy="64.9412" dx="226" dy="298" onLabel="true" />
+		<symbol cx="296" cy="172" sx="153" sy="65" dx="222" dy="334" onLabel="true" />
 	
-		<label cx="28.5" cy="12" dx="428" dy="456" />
+		<label cx="58" cy="12" dx="452" dy="539" />
+	
+		<instanceData>
+			<datum id="Type_HE" value="Liquid2Gas" pos="P" />
+			<datum id="Type_dp" value="Known_dp" pos="P" />
+		</instanceData>
 	
 	</component>
 
-	<connector id="Connector_3" sShape="New_Junction_1" sPort="f_out" eShape="Outlet_1" ePort="f" points="384,416"  intermediate2="1" dx="10" dy="10"  />
+	<component id="Heat_exchanger_2" library="LPRES" type="Heat_exchanger" layer="1"  hotPort="f_out" >
+	
+		<symbol cx="296" cy="172" sx="153" sy="65" dx="222" dy="152" flipY="true" flipX="true" onLabel="true" />
+	
+		<label cx="58" cy="12" dx="452" dy="357" />
+	
+		<instanceData>
+			<datum id="Type_HE" value="Gas2Liquid" pos="P" />
+			<datum id="Type_dp" value="Known_dp" pos="P" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_2" sShape="Inlet_1" sPort="f" eShape="Heat_exchanger_1" ePort="f_in" points="388,536"  />
+
+	<connector id="Connector_3" sShape="Heat_exchanger_1" sPort="f_out" eShape="Outlet_1" ePort="f" points="672,528"  intermediate1="1"  />
+
+	<connector id="Connector_1" sShape="Heat_exchanger_2" sPort="h" eShape="Heat_exchanger_1" ePort="h" points="516,476"  intermediate2="1"  />
+
+	<connector id="Connector_4" sShape="Inlet_2" sPort="f" eShape="Heat_exchanger_2" ePort="f_in" points="648,296"  intermediate2="1"  />
+
+	<connector id="Connector_5" sShape="Heat_exchanger_2" sPort="f_out" eShape="Outlet_2" ePort="f" points="388,304"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.
@@ -40,8 +90,6 @@
 -- You can edit the parameters clicking over them.
 
 COMPONENT %NAME% 
-
-
 END COMPONENT
 ]]>
 	</bodyEL>

@@ -15,7 +15,7 @@ EXPERIMENT exp1 ON SSME_ajuste.Design
       GasGen_LOX.W_F = 19.05
       Junction_LOX.A_in1 = 0.01
       Junction_LOX.V_in2 = 10
-      Junction_LH2_1.M_in2 = 0.1
+      Junction_LH2_1.M_in2 = 0.3
       Junction_LH2_1.M_out = 0.3
       Junction_LH2_2.M_in2 = 0.3
       Junction_LH2_2.M_out = 0.3
@@ -78,7 +78,8 @@ EXPERIMENT exp1 ON SSME_ajuste.Design
       --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
       --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
       TOLTYPE= ABSTOL -- convergence criteria
-      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+      TOLERANCE = 1e-06 -- steady solver relative tolerance
+		MAXITER = 1000000
 
       -- Call the steady state function
       STEADY()

@@ -50,18 +50,6 @@
 	
 	</component>
 
-	<component id="Junction_la_buena_1" library="LPRES" type="Junction_la_buena" layer="1"  hotPort="f_in2" >
-	
-		<symbol cx="136" cy="136" sx="49" sy="33" dx="412" dy="300" onLabel="true" />
-	
-		<label cx="64.5" cy="12" dx="474" dy="450" />
-	
-		<instanceData>
-			<datum id="Type" value="Compressible" pos="P" />
-		</instanceData>
-	
-	</component>
-
 	<component id="Inlet_1" library="LPRES" type="Inlet" layer="1"  hotPort="f" >
 	
 		<symbol cx="208.029" cy="72" sx="64.9412" sy="89" dx="112" dy="24" onLabel="true" />
@@ -128,10 +116,6 @@
 	
 	</component>
 
-	<connector id="Connector_2" sShape="GasGen_1" sPort="g" eShape="Junction_la_buena_1" ePort="f_in2" points="688,424 688,432"  intermediate2="1"  />
-
-	<connector id="Connector_3" sShape="Junction_la_buena_1" sPort="f_out" eShape="Outlet" ePort="f" points="548,448 548,584"  intermediate1="1"  />
-
 	<connector id="Connector_4" sShape="Inlet_1" sPort="f" eShape="Injector_1" ePort="f_in" points="352,136"  intermediate1="1"  />
 
 	<component id="Injector_3" library="LPRES" type="Injector" layer="1"  hotPort="f_out" >
@@ -183,8 +167,6 @@
 	</component>
 
 	<connector id="Connector_1" sShape="GasGen_2" sPort="g" eShape="Turbine_1" ePort="f_in" points="272,400"  intermediate2="1"  />
-
-	<connector id="Connector_12" sShape="Turbine_1" sPort="f_out" eShape="Junction_la_buena_1" ePort="f_in1" points="392,432"  intermediate1="1"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.

@@ -8,7 +8,7 @@
 			<layer id="1" name="Layer_1" isVisible="true" isActive="true" elPosition="1" />
 	</layers>
 	
-	<text id="Text_1" cx="105" cy="28" sx="210" sy="56" lineType="0"  color="255,255,220" dx="1752" dy="1152" layer="1"  >
+	<text id="Text_1" cx="105" cy="28" sx="210" sy="56" lineType="0"  color="255,255,220" dx="1235" dy="1112" layer="1"  >
 		<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; LIBRARY: SSME_EXPERIMENTS&#60;/p&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; FILE: SSME_Design_V&#60;/p&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; CREATION DATE: 23/04/2019&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
 	</text>
 
@@ -27,6 +27,8 @@
 		<label cx="47.5" cy="12" dx="214.501" dy="402" />
 	
 		<instanceData>
+			<datum id="A_in" value="0.0751151052" pos="D" />
+			<datum id="r_m" value="0.157776686" pos="D" />
 			<datum id="eta_d" value="0.55" pos="D" />
 		</instanceData>
 	
@@ -67,6 +69,7 @@
 			<datum id="Q_comb" value="14700000" pos="D" />
 			<datum id="cp_P" value="3500" pos="D" />
 			<datum id="M_P" value="15" pos="D" />
+			<datum id="c_P" value="3500" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -146,25 +149,25 @@
 
 	<component id="ThrustMonitor" library="LPRES" type="ThrustMonitor" layer="1" elPosition="12"  hotPort="i" >
 	
-		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="1309" dy="980" onLabel="true" />
+		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="792" dy="940" onLabel="true" />
 	
-		<label cx="43.5" cy="12" dx="1530.5" dy="1142" />
+		<label cx="43.5" cy="12" dx="1013.5" dy="1102" />
 	
 	</component>
 
 	<component id="ControlPanel_1" library="LPRES" type="ControlPanel" layer="1" elPosition="13" >
 	
-		<symbol cx="418" cy="226" sx="173" sy="93" dx="1337" dy="732" onLabel="true" />
+		<symbol cx="418" cy="226" sx="173" sy="93" dx="820" dy="692" onLabel="true" />
 	
-		<label cx="48" cy="12" dx="1699.5" dy="1002" />
+		<label cx="48" cy="12" dx="1182.5" dy="962" />
 	
 	</component>
 
 	<component id="HighPump_LH2" library="LPRES" type="Pump" layer="1" elPosition="14"  hotPort="f_out" >
 	
-		<symbol cx="432" cy="277.518" sx="105" sy="84.0355" dx="-46" dy="546" onLabel="true" />
+		<symbol cx="432" cy="277.518" sx="105" sy="84.0355" dx="-48" dy="544" onLabel="true" />
 	
-		<label cx="49" cy="12" dx="332" dy="863.036" />
+		<label cx="49" cy="12" dx="330" dy="861.036" />
 	
 		<instanceData>
 			<datum id="eta_d" value="0.77" pos="D" />
@@ -258,6 +261,7 @@
 			<datum id="Q_comb" value="14700000" pos="D" />
 			<datum id="cp_P" value="3500" pos="D" />
 			<datum id="M_P" value="15" pos="D" />
+			<datum id="c_P" value="3500" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -481,21 +485,21 @@
 
 	<connector id="Connector_16" sShape="FlowMeter_2" sPort="f_out" eShape="Inj_O_CC" ePort="f_in" points="901,722"  intermediate1="1" elPosition="6" lineColor="85,255,0"   />
 
-	<connector id="Connector_18" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="1673,1144"  intermediate1="1" elPosition="7"  />
+	<connector id="Connector_18" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="1673,1144"  intermediate1="1" elPosition="7" dx="-517" dy="-40"  />
 
-	<connector id="Connector_19" sShape="CombCha" sPort="i" eShape="ControlPanel_1" ePort="i_Comb" points="933,932"  intermediate1="1" elPosition="8" lineWidth="0.5" lineType="2"   />
+	<connector id="Connector_19" sShape="CombCha" sPort="i" eShape="ControlPanel_1" ePort="i_Comb" points="1156,872"  intermediate2="1" elPosition="8" lineWidth="0.5" lineType="2"   />
 
-	<connector id="Connector_20" sShape="FlowMeter_1" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="797,720 797,952 1837,952"  intermediate1="1" elPosition="9" lineWidth="0.5" lineType="2"   />
+	<connector id="Connector_20" sShape="FlowMeter_1" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="797,720 797,952 1328,952 1328,904"  intermediate2="4" elPosition="9" lineWidth="0.5" lineType="2"   />
 
-	<connector id="Connector_21" sShape="FlowMeter_2" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="946,696 1765,696 1765,944"  intermediate1="1" elPosition="10" lineWidth="0.5" lineType="2"   />
+	<connector id="Connector_21" sShape="FlowMeter_2" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="946,696 1432,704 1432,936 1320,936"  intermediate2="4" elPosition="10" lineWidth="0.5" lineType="2"   />
 
-	<connector id="Connector_4" sShape="LowPump_LH2" sPort="f_out" eShape="HighPump_LH2" ePort="f_in" elPosition="11" lineColor="255,0,0"   />
+	<connector id="Connector_4" sShape="LowPump_LH2" sPort="f_out" eShape="HighPump_LH2" ePort="f_in" points="338,832"  intermediate2="1" elPosition="11" lineColor="255,0,0"   />
 
 	<connector id="Connector_5" sShape="CombCha" sPort="h" eShape="CoolingJacket_CC" ePort="h" points="821,940 821,880"  intermediate2="2" elPosition="12"  />
 
 	<connector id="Connector_17" sShape="CombCha" sPort="g" eShape="NozzleExt_1" ePort="g_in" elPosition="13"  />
 
-	<connector id="Connector_3" sShape="NozzleExt_1" sPort="g_out" eShape="ThrustMonitor" ePort="g" points="1609,1096"  intermediate2="1" elPosition="14"  />
+	<connector id="Connector_3" sShape="NozzleExt_1" sPort="g_out" eShape="ThrustMonitor" ePort="g" points="1092,1096"  intermediate2="1" elPosition="14"  />
 
 	<connector id="Connector_7" sShape="LPT_LH2" sPort="m" eShape="LowPump_LH2" ePort="m" points="645,232 386,232"  intermediate2="2" elPosition="15"  />
 
@@ -519,7 +523,7 @@
 
 	<connector id="Connector_28" sShape="GasGen_LH2" sPort="g" eShape="HPT_LH2" ePort="f_in" points="661,568"  intermediate2="1" elPosition="25" lineColor="255,170,0"   />
 
-	<connector id="Connector_29" sShape="HPT_LH2" sPort="m" eShape="HighPump_LH2" ePort="m" points="653,520 653,464 429,464 429,776 386,776"  intermediate2="5" elPosition="26"  />
+	<connector id="Connector_29" sShape="HPT_LH2" sPort="m" eShape="HighPump_LH2" ePort="m" points="653,520 653,464 429,464 429,776 384,776"  intermediate2="5" elPosition="26"  />
 
 	<connector id="Connector_30" sShape="HPT_LH2" sPort="f_out" eShape="Junction_LH2_1" ePort="f_in2" points="541,596" elPosition="27" lineColor="255,170,0"   />
 
@@ -555,7 +559,7 @@
 
 	<connector id="Connector_42" sShape="Junction_LOX" sPort="f_out" eShape="HighPump_LOX" ePort="f_in" points="1405,440"  intermediate1="1" elPosition="43" lineColor="85,255,0"   />
 
-	<connector id="Connector_6" sShape="HighPump_LH2" sPort="f_out" eShape="Valve_2" ePort="f_in" points="450,834"  intermediate2="1" elPosition="44" lineColor="255,0,0"   />
+	<connector id="Connector_6" sShape="HighPump_LH2" sPort="f_out" eShape="Valve_2" ePort="f_in" points="432,826"  intermediate1="1" elPosition="44" lineColor="255,0,0"   />
 
 	<connector id="Connector_50" sShape="Valve_2" sPort="f_out" eShape="SF_LH2_1" ePort="f_in" points="530,828"  intermediate1="1" elPosition="45" lineColor="255,0,0"   />
 

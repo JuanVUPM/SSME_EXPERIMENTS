@@ -1,0 +1,81 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: Amo_a_proba
+ PARTITION: Prueba_Cp_Lv
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 14/06/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON Amo_a_proba.Prueba_Cp_Lv
+   DECLS
+		REAL Vector_Cp[10]
+		REAL Vector_Lv[10]
+		REAL Vector_T_boil[10]	
+		REAL Vector_mass_flow[10]
+		REAL T_inicial
+		REAL T_final
+		REAL Q
+   OBJECTS
+   INIT
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Pipe_1.f_in.Tt = 300
+      Pipe_1.f_in.W = 10
+      Pipe_1.f_in.fluid[Air] = 0
+      Pipe_1.f_in.fluid[Ar] = 0
+      Pipe_1.f_in.fluid[CH4] = 0
+      Pipe_1.f_in.fluid[CO2] = 0
+      Pipe_1.f_in.fluid[CO] = 0
+      Pipe_1.f_in.fluid[Comb_prod] = 0
+      Pipe_1.f_in.fluid[Comb_prod_Lv] = 0
+      Pipe_1.f_in.fluid[Comb_prod_M] = 0
+      Pipe_1.f_in.fluid[Comb_prod_c] = 0
+      Pipe_1.f_in.fluid[Comb_prod_cond] = 0
+      Pipe_1.f_in.fluid[Comb_prod_cp] = 0
+      Pipe_1.f_in.fluid[Comb_prod_cp_g] = 0
+      Pipe_1.f_in.fluid[Comb_prod_visc] = 0
+		Pipe_1.f_in.fluid[Comb_prod_T_boil] = 25
+      Pipe_1.f_in.fluid[H2O2] = 0
+      Pipe_1.f_in.fluid[H2O] = 0
+      Pipe_1.f_in.fluid[H2O_vapour] = 0
+      Pipe_1.f_in.fluid[H2] = 0.125
+      Pipe_1.f_in.fluid[HNO3] = 0
+      Pipe_1.f_in.fluid[He] = 0
+      Pipe_1.f_in.fluid[IPA] = 0
+      Pipe_1.f_in.fluid[JP_10] = 0
+      Pipe_1.f_in.fluid[Kerox] = 0
+      Pipe_1.f_in.fluid[LCH4] = 0.125
+      Pipe_1.f_in.fluid[LF2] = 0
+      Pipe_1.f_in.fluid[LH2] = 0.125
+      Pipe_1.f_in.fluid[LOX] = 0.125
+      Pipe_1.f_in.fluid[MMH] = 0.125
+      Pipe_1.f_in.fluid[MMH_vapour] = 0.125
+      Pipe_1.f_in.fluid[N2H4] = 0
+      Pipe_1.f_in.fluid[N2] = 0
+      Pipe_1.f_in.fluid[NH3] = 0
+      Pipe_1.f_in.fluid[NTO] = 0
+      Pipe_1.f_in.fluid[O2] = 0.125
+      Pipe_1.f_in.fluid[Oil] = 0
+      Pipe_1.f_in.fluid[RP_1] = 0
+      Pipe_1.f_in.fluid[UDMH] = 0
+      Pipe_1.f_in.pt = 10e6
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+		T_inicial = 200
+		T_final = 1000
+		Obtain_Vap_Prop(Pipe_1.f_in.fluid, Vector_Cp, Vector_Lv, Vector_T_boil, Vector_mass_flow)
+		Q = SUM (i IN 1,setofSize(LV_extended)/2; Vector_Cp[2*i-1]*(Vector_T_boil[2*i-1]-T_inicial)) 
+END EXPERIMENT

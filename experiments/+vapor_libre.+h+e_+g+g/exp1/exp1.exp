@@ -1,0 +1,41 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: SSME_EXPERIMENTS
+ COMPONENT: Vapor_libre
+ PARTITION: HE_GG
+ EXPERIMENT: exp1
+ TEMPLATE: STEADY
+ CREATION DATE: 11/06/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp1 ON Vapor_libre.HE_GG
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+      Heat_exchanger_1.h.A = 1
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      Heat_exchanger_1.f_in.W = 10
+      Heat_exchanger_2.f_in.W = 10
+      Inlet_1.Tt = 300
+      Inlet_1.pt = 1000000
+      Inlet_2.Tt = 1000
+      Inlet_2.pt = 1000000
+      Outlet_1.Tt = 500
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 3      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT
